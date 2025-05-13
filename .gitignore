@@ -1,0 +1,48 @@
+# Thư mục chứa dữ liệu người dùng của Visual Studio
+.vs/
+
+# Thư mục build
+bin/
+obj/
+
+# Các file log và cache tạm
+*.log
+*.tlog
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Thư mục build của Rider/JetBrains (nếu bạn dùng Rider)
+.idea/
+
+# File tạm khi publish
+*.publish.xml
+
+# Các file tạm khác
+*.tmp
+*.temp
+*.bak
+
+# Tệp môi trường
+.env
+
+# Database local
+*.db
+*.sqlite
+
+# Thư mục chứa secret trong dev (nếu dùng)
+secrets/
+
+# Cấu hình launch & tasks (tùy bạn muốn commit không)
+.vscode/launch.json
+.vscode/tasks.json
+
+# File của test coverage (nếu dùng công cụ như coverlet)
+coverage/
+
+# Thư mục node_modules (nếu có frontend đi kèm)
+node_modules/
+
+# Nếu dùng docker để build, bạn có thể ignore các file sau:
+**/*.pid

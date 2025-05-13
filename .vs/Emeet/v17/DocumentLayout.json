@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "D:\\DotnetReference\\Emeet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{26A5900B-0D17-467E-B2A0-14C9D85FF22D}|Emeet.Domain\\Emeet.Domain.csproj|d:\\dotnetreference\\emeet\\emeet.domain\\specifications\\paginate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26A5900B-0D17-467E-B2A0-14C9D85FF22D}|Emeet.Domain\\Emeet.Domain.csproj|solutionrelative:emeet.domain\\specifications\\paginate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26A5900B-0D17-467E-B2A0-14C9D85FF22D}|Emeet.Domain\\Emeet.Domain.csproj|d:\\dotnetreference\\emeet\\emeet.domain\\specifications\\ipaginate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26A5900B-0D17-467E-B2A0-14C9D85FF22D}|Emeet.Domain\\Emeet.Domain.csproj|solutionrelative:emeet.domain\\specifications\\ipaginate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9A1DE4AD-9458-4B33-AD91-ED6CAF8259F1}|Emeet.API\\Emeet.API.csproj|d:\\dotnetreference\\emeet\\emeet.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A1DE4AD-9458-4B33-AD91-ED6CAF8259F1}|Emeet.API\\Emeet.API.csproj|solutionrelative:emeet.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -67,45 +59,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Paginate.cs",
-              "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.Domain\\Specifications\\Paginate.cs",
-              "RelativeDocumentMoniker": "Emeet.Domain\\Specifications\\Paginate.cs",
-              "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.Domain\\Specifications\\Paginate.cs",
-              "RelativeToolTip": "Emeet.Domain\\Specifications\\Paginate.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAcwCYAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T14:34:27.556Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IPaginate.cs",
-              "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.Domain\\Specifications\\IPaginate.cs",
-              "RelativeDocumentMoniker": "Emeet.Domain\\Specifications\\IPaginate.cs",
-              "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.Domain\\Specifications\\IPaginate.cs",
-              "RelativeToolTip": "Emeet.Domain\\Specifications\\IPaginate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T14:30:13.325Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.API\\Program.cs",
               "RelativeDocumentMoniker": "Emeet.API\\Program.cs",
               "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.API\\Program.cs",
               "RelativeToolTip": "Emeet.API\\Program.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADQAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAC4AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-13T13:55:32.999Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "AuthenticationController.cs",
               "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.API\\Controllers\\AuthenticationController.cs",
               "RelativeDocumentMoniker": "Emeet.API\\Controllers\\AuthenticationController.cs",
@@ -113,12 +79,11 @@
               "RelativeToolTip": "Emeet.API\\Controllers\\AuthenticationController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T13:58:45.613Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T13:58:45.613Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "DependencyInjection.cs",
               "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.API\\Configurations\\DependencyInjection.cs",
               "RelativeDocumentMoniker": "Emeet.API\\Configurations\\DependencyInjection.cs",
@@ -126,12 +91,11 @@
               "RelativeToolTip": "Emeet.API\\Configurations\\DependencyInjection.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T13:57:08.648Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T13:57:08.648Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "ApiEndPointConstant.cs",
               "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.API\\Constants\\ApiEndPointConstant.cs",
               "RelativeDocumentMoniker": "Emeet.API\\Constants\\ApiEndPointConstant.cs",
@@ -139,8 +103,7 @@
               "RelativeToolTip": "Emeet.API\\Constants\\ApiEndPointConstant.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T13:56:19.307Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T13:56:19.307Z"
             }
           ]
         },
