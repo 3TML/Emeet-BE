@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35219.272
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emeet.API", "Emeet.API\Emeet.API.csproj", "{9A1DE4AD-9458-4B33-AD91-ED6CAF8259F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emeet.API", "Emeet.API\Emeet.API.csproj", "{9A1DE4AD-9458-4B33-AD91-ED6CAF8259F1}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{EF30065A-4809-4176-B533-9447099427C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emeet.Domain", "Emeet.Domain\Emeet.Domain.csproj", "{26A5900B-0D17-467E-B2A0-14C9D85FF22D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emeet.Domain", "Emeet.Domain\Emeet.Domain.csproj", "{26A5900B-0D17-467E-B2A0-14C9D85FF22D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emeet.Infrastructure", "Emeet.Infrastructure\Emeet.Infrastructure.csproj", "{1EA1DC6C-2A5F-475D-8161-E5A0EAE62439}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emeet.Infrastructure", "Emeet.Infrastructure\Emeet.Infrastructure.csproj", "{1EA1DC6C-2A5F-475D-8161-E5A0EAE62439}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emeet.Service", "Emeet.Service\Emeet.Service.csproj", "{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emeet.Service", "Emeet.Service\Emeet.Service.csproj", "{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emeet.Common", "..\Emeet.Common\Emeet.Common.csproj", "{57264FEE-6DEC-4309-B872-DE7C11C9DED8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57264FEE-6DEC-4309-B872-DE7C11C9DED8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57264FEE-6DEC-4309-B872-DE7C11C9DED8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57264FEE-6DEC-4309-B872-DE7C11C9DED8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57264FEE-6DEC-4309-B872-DE7C11C9DED8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

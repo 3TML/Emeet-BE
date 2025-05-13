@@ -1,5 +1,6 @@
 using Emeet.API.Configurations;
 using Emeet.API.Constants;
+using Emeet.Service.Helpers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -48,7 +49,7 @@ builder.Services.AddDIRepositories();
 builder.Services.AddDIAccessor();
 
 // Auto Mapping
-//builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
+builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
 // Add services to the container.
 //builder.Services.AddHttpClient<GeminiAIService>(client =>

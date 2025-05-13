@@ -10,9 +10,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="14.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Emeet.Domain\Emeet.Domain.csproj" />
+    <ProjectReference Include="..\Emeet.Infrastructure\Emeet.Infrastructure.csproj" />
+    <ProjectReference Include="..\Emeet.Service\Emeet.Service.csproj" />
   </ItemGroup>
 
 </Project>
