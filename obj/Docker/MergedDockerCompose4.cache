@@ -1,0 +1,44 @@
+name: dockercompose12534333362470533976
+services:
+  emeet.api:
+    build:
+      context: D:\DotnetReference\Emeet
+      dockerfile: Emeet.API/Dockerfile
+    container_name: emeet-api-new
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      ASPNETCORE_HTTPS_PORTS: "8081"
+      ASPNETCORE_URLS: http://+:8085
+      TZ: Asia/Ho_Chi_Minh
+    image: emeetapi
+    networks:
+      demo: null
+    ports:
+      - mode: ingress
+        target: 8085
+        published: "8089"
+        protocol: tcp
+      - mode: ingress
+        target: 8080
+        protocol: tcp
+      - mode: ingress
+        target: 8081
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\flami\AppData\Roaming/Microsoft/UserSecrets
+        target: /home/app/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\flami\AppData\Roaming/ASP.NET/Https
+        target: /home/app/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+networks:
+  demo:
+    name: dockercompose12534333362470533976_demo
+    driver: bridge

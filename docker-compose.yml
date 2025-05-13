@@ -1,0 +1,19 @@
+﻿version: '3.4'
+
+services:
+  emeet.api:
+    container_name: emeet-api-new
+    build:
+      context: .
+      dockerfile: Emeet.API/Dockerfile
+    image: emeetapi
+    networks:
+      - demo
+    ports:
+      - "8089:8085"   # Cổng HTTP (nếu cần)
+    environment:
+      - ASPNETCORE_URLS=http://+:8085
+      - TZ=Asia/Ho_Chi_Minh
+networks:
+  demo:
+    driver: bridge
