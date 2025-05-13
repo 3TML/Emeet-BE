@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Emeet.Domain.Specifications
 {
-    internal interface IPaginate<TResult>
+    public interface IPaginate<TResult>
     {
         int Size { get; }
         int Page { get; }

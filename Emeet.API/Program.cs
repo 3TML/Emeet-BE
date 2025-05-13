@@ -1,3 +1,4 @@
+using Emeet.API.Configurations;
 using Emeet.API.Constants;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -41,10 +42,10 @@ builder.Services.AddSwaggerGen(c =>
 // ******************* Add services to the container  **************************
 
 // Dependency Injection
-//builder.Services.AddUnitOfWork();
-//builder.Services.AddDIServices();
-//builder.Services.AddDIRepositories();
-//builder.Services.AddDIAccessor();
+builder.Services.AddUnitOfWork();
+builder.Services.AddDIServices();
+builder.Services.AddDIRepositories();
+builder.Services.AddDIAccessor();
 
 // Auto Mapping
 //builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
