@@ -302,7 +302,14 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\DotnetReference\\Emeet\\Emeet.Domain\\Emeet.Domain.csproj": {
+                "projectPath": "D:\\DotnetReference\\Emeet\\Emeet.Domain\\Emeet.Domain.csproj"
+              },
+              "D:\\DotnetReference\\Emeet\\Emeet.Infrastructure\\Emeet.Infrastructure.csproj": {
+                "projectPath": "D:\\DotnetReference\\Emeet\\Emeet.Infrastructure\\Emeet.Infrastructure.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
