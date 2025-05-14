@@ -1,4 +1,4 @@
-using Emeet.API.Configurations;
+﻿using Emeet.API.Configurations;
 using Emeet.API.Constants;
 using Emeet.Service.Helpers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -66,9 +66,12 @@ builder.Services.AddDIAccessor();
 //                  .AllowCredentials();  // Allow credentials for CORS
 //        });
 //});
-builder.Services.AddCors(p => p.AddPolicy(CorsConstant.PolicyName, builder =>
+builder.Services.AddCors(p => p.AddPolicy(CorsConstant.PolicyName, policyBuilder =>
 {
-    builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+    policyBuilder
+        .AllowAnyOrigin()   // Cho phép tất cả origin
+        .AllowAnyMethod()
+        .AllowAnyHeader();
 }));
 
 // Jwt configuration starts here
@@ -106,7 +109,7 @@ app.UseSwaggerUI();
 //app.UseCors(CorsConstant.PolicyName);
 
 app.UseHttpsRedirection();
-
+app.UseCors(CorsConstant.PolicyName);
 app.UseAuthentication();
 app.UseAuthorization();
 
