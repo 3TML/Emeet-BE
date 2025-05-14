@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Emeet.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e095057f74154d98af35095fcb1fc7bffab90fc7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f03294b936ab0639d9b96d8a52a2ca25056c32ef")]
 [assembly: System.Reflection.AssemblyProductAttribute("Emeet.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Emeet.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

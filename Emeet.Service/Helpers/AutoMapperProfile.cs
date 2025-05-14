@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Emeet.Domain.Entities;
+using Emeet.Service.DTOs.Responses.Category;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +16,7 @@ namespace Emeet.Service.Helpers
         public AutoMapperProfile()
         {
             //Admin 
-            //CreateMap<AdminLoginResponse, Admin>().ReverseMap();
+            CreateMap<GetCategoryResponse, Category>().ReverseMap();
         }
     }
 }

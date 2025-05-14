@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
+using AutoMapper;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -47,9 +48,6 @@ builder.Services.AddUnitOfWork();
 builder.Services.AddDIServices();
 builder.Services.AddDIRepositories();
 builder.Services.AddDIAccessor();
-
-// Auto Mapping
-builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
 // Add services to the container.
 //builder.Services.AddHttpClient<GeminiAIService>(client =>

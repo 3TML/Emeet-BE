@@ -1,7 +1,10 @@
-﻿using Emeet.Domain.Interfaces;
+﻿using AutoMapper;
+using Emeet.Domain.Interfaces;
 using Emeet.Infrastructure.Repository;
 using Emeet.Infrastructure.UnitOfWork;
-using Microsoft.AspNetCore.Authentication;
+using Emeet.Service.Helpers;
+using Emeet.Service.Interfaces;
+using Emeet.Service.Services;
 
 namespace Emeet.API.Configurations
 {
@@ -15,7 +18,17 @@ namespace Emeet.API.Configurations
 
         public static IServiceCollection AddDIServices(this IServiceCollection services)
         {
-            //services.AddScoped<IAuthenticationService, AuthenticationService>();
+            services.AddScoped<IAuthenticationService, AuthenticationService>();
+            services.AddScoped<ICategoryService, CategoryService>();
+            
+            var mapperConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new AutoMapperProfile());
+            });
+
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
+
             return services;
         }
         public static IServiceCollection AddDIRepositories(this IServiceCollection services)

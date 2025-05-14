@@ -1,5 +1,15 @@
 [
   {
+    "ContainingType": "Emeet.API.Controllers.CategoryController",
+    "Method": "GetAll",
+    "RelativePath": "api/v1/auth/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Emeet.API.Controllers.AuthenticationController",
     "Method": "TestAPI",
     "RelativePath": "api/v1/auth/TestAPI",

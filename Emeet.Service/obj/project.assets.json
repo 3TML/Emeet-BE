@@ -3554,7 +3554,8 @@
     "net8.0": [
       "AutoMapper >= 8.0.0",
       "Emeet.Domain >= 1.0.0",
-      "Emeet.Infrastructure >= 1.0.0"
+      "Emeet.Infrastructure >= 1.0.0",
+      "Microsoft.Extensions.Configuration >= 8.0.0"
     ]
   },
   "packageFolders": {
@@ -3615,6 +3616,10 @@
         "targetAlias": "net8.0",
         "dependencies": {
           "AutoMapper": {
+            "target": "Package",
+            "version": "[8.0.0, )"
+          },
+          "Microsoft.Extensions.Configuration": {
             "target": "Package",
             "version": "[8.0.0, )"
           }

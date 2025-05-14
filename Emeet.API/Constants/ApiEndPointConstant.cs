@@ -12,5 +12,10 @@
             public const string Login = AuthenticationEndpoint + "/login";
             public const string Info = AuthenticationEndpoint + "/info";
         }
+
+        public static class Category
+        {
+            public const string CategoryEndpoint = ApiEndpoint + "/category";
+        }
     }
 }
