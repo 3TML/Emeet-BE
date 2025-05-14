@@ -55,17 +55,21 @@ builder.Services.AddDIAccessor();
 //    client.BaseAddress = new Uri("https://generativelanguage.googleapis.com/v1beta/");
 //});
 
-builder.Services.AddCors(options =>
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy(name: CorsConstant.PolicyName,
+//        policy =>
+//        {
+//            policy.WithOrigins()
+//                  .AllowAnyHeader()
+//                  .AllowAnyMethod()
+//                  .AllowCredentials();  // Allow credentials for CORS
+//        });
+//});
+builder.Services.AddCors(p => p.AddPolicy(CorsConstant.PolicyName, builder =>
 {
-    options.AddPolicy(name: CorsConstant.PolicyName,
-        policy =>
-        {
-            policy.WithOrigins()
-                  .AllowAnyHeader()
-                  .AllowAnyMethod()
-                  .AllowCredentials();  // Allow credentials for CORS
-        });
-});
+    builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+}));
 
 // Jwt configuration starts here
 var jwtIssuer = builder.Configuration.GetSection("JwtSettings:Issuer").Get<string>();
