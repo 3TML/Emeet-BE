@@ -17,5 +17,10 @@
         {
             public const string CategoryEndpoint = ApiEndpoint + "/category";
         }
+
+        public static class OTP
+        {
+            public const string OTPEndpoint = ApiEndpoint + "/otp";
+        }
     }
 }

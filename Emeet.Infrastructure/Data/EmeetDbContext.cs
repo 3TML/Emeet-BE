@@ -25,6 +25,7 @@ namespace Emeet.Infrastructure.Data
         }
 
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<OTP> OTPs { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Expert> Experts { get; set; }
         public virtual DbSet<ExpertCategory> ExpertCategories { get; set; }
@@ -36,6 +37,24 @@ namespace Emeet.Infrastructure.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<OTP>(entity =>
+            {
+                entity.ToTable("otp");
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.Id).HasColumnName("id").IsRequired();
+
+                entity.Property(e => e.Email).HasColumnName("email").HasMaxLength(64).IsRequired(false);
+
+                entity.Property(e => e.OtpKey).HasColumnName("otp_key").HasMaxLength(100).IsRequired(false);
+
+                entity.Property(e => e.CreatedTime).HasColumnName("created_time").IsRequired(false);
+
+                entity.Property(e => e.ExpireTime).HasColumnName("expire_time").IsRequired(false);
+
+                entity.Property(e => e.EndTime).HasColumnName("end_time").IsRequired(false);
+            });
+
             modelBuilder.Entity<User>(entity =>
             {
                 entity.ToTable("user");
@@ -46,13 +65,15 @@ namespace Emeet.Infrastructure.Data
                 entity.Property(e => e.Password).HasMaxLength(50).HasColumnName("password");
                 entity.Property(e => e.Role).HasMaxLength(20).HasColumnName("role");
                 entity.Property(e => e.Avatar).HasColumnName("avatar");
-                entity.Property(e => e.Bio).HasColumnName("bio");
+                entity.Property(e => e.Bio).HasColumnName("bio").IsRequired(false);
                 entity.Property(e => e.DateCreate).HasColumnName("date_create");
-                entity.Property(e => e.DateUpdated).HasColumnName("date_updated");
-                entity.Property(e => e.RefreshToken).HasMaxLength(255).HasColumnName("refresh_token");
-                entity.Property(e => e.RefreshTokenExpiry).HasColumnName("refresh_token_expiry");
+                entity.Property(e => e.DateUpdated).HasColumnName("date_updated").IsRequired(false);
+                entity.Property(e => e.RefreshToken).HasMaxLength(255).HasColumnName("refresh_token").IsRequired(false);
+                entity.Property(e => e.RefreshTokenExpiry).HasColumnName("refresh_token_expiry").IsRequired(false);
                 entity.Property(e => e.Email).HasMaxLength(100).HasColumnName("email");
                 entity.Property(e => e.Status).HasMaxLength(20).HasColumnName("status");
+                entity.Property(e => e.IsExpert).HasColumnName("is_expert");
+                entity.Property(e => e.Gender).HasMaxLength(25).HasColumnName("gender");
             });
             modelBuilder.Entity<Category>(entity =>
             {

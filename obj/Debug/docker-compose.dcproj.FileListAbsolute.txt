@@ -33,3 +33,8 @@ D:\DotnetReference\Emeet\bin\Debug\Emeet.Infrastructure.pdb
 D:\DotnetReference\Emeet\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
 D:\DotnetReference\Emeet\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 D:\DotnetReference\Emeet\obj\Debug\docker-c.35A3FFBA.Up2Date
+D:\DotnetReference\Emeet\bin\Debug\MailKit.dll
+D:\DotnetReference\Emeet\bin\Debug\MimeKit.dll
+D:\DotnetReference\Emeet\bin\Debug\BouncyCastle.Cryptography.dll
+D:\DotnetReference\Emeet\bin\Debug\System.Formats.Asn1.dll
+D:\DotnetReference\Emeet\bin\Debug\System.Security.Cryptography.Pkcs.dll

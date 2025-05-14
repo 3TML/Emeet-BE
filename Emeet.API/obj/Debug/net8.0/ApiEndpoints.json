@@ -1,12 +1,18 @@
 [
   {
-    "ContainingType": "Emeet.API.Controllers.CategoryController",
-    "Method": "GetAll",
-    "RelativePath": "api/v1/auth/GetAll",
-    "HttpMethod": "GET",
+    "ContainingType": "Emeet.API.Controllers.AuthenticationController",
+    "Method": "RegisterAccount",
+    "RelativePath": "api/v1/auth/RegisterAccount",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Emeet.Service.DTOs.Requests.Authentication.RegisterRequest",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -17,6 +23,80 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Emeet.API.Controllers.CategoryController",
+    "Method": "GetAll",
+    "RelativePath": "api/v1/category/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Emeet.API.Controllers.OTPController",
+    "Method": "CheckExistEmail",
+    "RelativePath": "api/v1/otp/CheckExistEmail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Emeet.Service.DTOs.Requests.Email.CheckExistEmailResrequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Emeet.API.Controllers.OTPController",
+    "Method": "CheckNonExistEmail",
+    "RelativePath": "api/v1/otp/CheckNonExistEmail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Emeet.Service.DTOs.Requests.Email.CheckExistEmailResrequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Emeet.API.Controllers.OTPController",
+    "Method": "checkOtp",
+    "RelativePath": "api/v1/otp/checkOtp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CheckOtpRequest",
+        "Type": "Emeet.Service.DTOs.Requests.OTP.CheckOtpRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Emeet.API.Controllers.OTPController",
+    "Method": "SendOTPToEmail",
+    "RelativePath": "api/v1/otp/SendOTPToEmail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sendOtpEmailRequest",
+        "Type": "Emeet.Service.DTOs.Requests.Email.SendOtpEmailRequest",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   }
 ]

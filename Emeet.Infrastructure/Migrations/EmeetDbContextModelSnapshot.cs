@@ -217,6 +217,40 @@ namespace Emeet.Infrastructure.Migrations
                     b.ToTable("feedback", (string)null);
                 });
 
+            modelBuilder.Entity("Emeet.Domain.Entities.OTP", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("id");
+
+                    b.Property<DateTime?>("CreatedTime")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("created_time");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(64)
+                        .HasColumnType("nvarchar(64)")
+                        .HasColumnName("email");
+
+                    b.Property<DateTime?>("EndTime")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("end_time");
+
+                    b.Property<double?>("ExpireTime")
+                        .HasColumnType("float")
+                        .HasColumnName("expire_time");
+
+                    b.Property<string>("OtpKey")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("otp_key");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("otp", (string)null);
+                });
+
             modelBuilder.Entity("Emeet.Domain.Entities.Payment", b =>
                 {
                     b.Property<Guid>("Id")
@@ -349,7 +383,6 @@ namespace Emeet.Infrastructure.Migrations
                         .HasColumnName("avatar");
 
                     b.Property<string>("Bio")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("bio");
 
@@ -367,6 +400,16 @@ namespace Emeet.Infrastructure.Migrations
                         .HasColumnType("nvarchar(100)")
                         .HasColumnName("email");
 
+                    b.Property<string>("Gender")
+                        .IsRequired()
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)")
+                        .HasColumnName("gender");
+
+                    b.Property<bool>("IsExpert")
+                        .HasColumnType("bit")
+                        .HasColumnName("is_expert");
+
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -374,12 +417,11 @@ namespace Emeet.Infrastructure.Migrations
                         .HasColumnName("password");
 
                     b.Property<string>("RefreshToken")
-                        .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)")
                         .HasColumnName("refresh_token");
 
-                    b.Property<DateTime>("RefreshTokenExpiry")
+                    b.Property<DateTime?>("RefreshTokenExpiry")
                         .HasColumnType("datetime2")
                         .HasColumnName("refresh_token_expiry");
 
