@@ -13,7 +13,7 @@ namespace Emeet.Service.Interfaces
         public Task<LoginResponse> LoginPassword(LoginPasswordRequest request);
         public Task<RefreshTokenResponse> RefreshToken(RefreshTokenRequest refreshTokenRequest);
         public Task<bool> Logout(LogoutRequest logoutRequest);
-        public Task<FetchUserResponse> FetchUser(string accessToken);
+        public Task<LoginResponse> FetchUser(string accessToken);
         public Task<bool> RegisterUser(RegisterRequest request);
     }
 }

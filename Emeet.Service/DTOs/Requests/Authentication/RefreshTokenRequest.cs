@@ -8,5 +8,6 @@ namespace Emeet.Service.DTOs.Requests.Authentication
 {
     public class RefreshTokenRequest
     {
+        public string RefreshToken { get; set; }
     }
 }

@@ -1,6 +1,38 @@
 [
   {
     "ContainingType": "Emeet.API.Controllers.AuthenticationController",
+    "Method": "FetchUser",
+    "RelativePath": "api/v1/auth/FetchUser/{accessToken}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accessToken",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Emeet.API.Controllers.AuthenticationController",
+    "Method": "GetAccessToken",
+    "RelativePath": "api/v1/auth/GetAccessToken",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Emeet.Service.DTOs.Requests.Authentication.RefreshTokenRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Emeet.API.Controllers.AuthenticationController",
     "Method": "LoginByPassword",
     "RelativePath": "api/v1/auth/LoginByPassword",
     "HttpMethod": "POST",
@@ -10,6 +42,22 @@
       {
         "Name": "request",
         "Type": "Emeet.Service.DTOs.Requests.Authentication.LoginPasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Emeet.API.Controllers.AuthenticationController",
+    "Method": "LogOut",
+    "RelativePath": "api/v1/auth/LogOut",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "logoutRequest",
+        "Type": "Emeet.Service.DTOs.Requests.Authentication.LogoutRequest",
         "IsRequired": true
       }
     ],
@@ -29,16 +77,6 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Emeet.API.Controllers.AuthenticationController",
-    "Method": "TestAPI",
-    "RelativePath": "api/v1/auth/TestAPI",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   },
   {

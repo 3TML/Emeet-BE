@@ -28,9 +28,24 @@ namespace Emeet.Service.Services
             _configuration = configuration;
         }
 
-        public Task<FetchUserResponse> FetchUser(string accessToken)
+        public async Task<LoginResponse> FetchUser(string accessToken)
         {
-            throw new NotImplementedException();
+            var account = await _unitOfWork.GetRepository<User>()
+                .SingleOrDefaultAsync(predicate: x => x.AccessToken.Equals(accessToken) && x.RefreshTokenExpiry >= DateTime.Now);
+
+            if (account == null)
+            {
+                throw new NotFoundException("Không tìm thấy access token!");
+            }
+            var response = _mapper.Map<LoginResponse>(account);
+
+            var expert = await _unitOfWork.GetRepository<Expert>().SingleOrDefaultAsync(predicate: x => x.UserId.Equals(account.Id));
+
+            if (expert != null)
+            {
+                response.ExpertInformation = _mapper.Map<ExpertInformation>(expert);
+            }
+            return response;
         }
 
         public async Task<LoginResponse> LoginPassword(LoginPasswordRequest request)
@@ -49,7 +64,13 @@ namespace Emeet.Service.Services
             account.RefreshToken = refreshToken;
             account.AccessToken = accessToken;
             account.RefreshTokenExpiry = DateTime.UtcNow.AddDays(30);
+
             _unitOfWork.GetRepository<User>().UpdateAsync(account);
+            bool isUpdate = await _unitOfWork.CommitAsync() > 0;
+            if (!isUpdate)
+            {
+                throw new Exception("Login failed");
+            }
 
             var response = _mapper.Map<LoginResponse>(account);
 
@@ -62,14 +83,39 @@ namespace Emeet.Service.Services
             return response;
         }
 
-        public Task<bool> Logout(LogoutRequest logoutRequest)
+        public async Task<bool> Logout(LogoutRequest logoutRequest)
         {
-            throw new NotImplementedException();
+            var user = await _unitOfWork.GetRepository<User>().SingleOrDefaultAsync(predicate: x => x.RefreshToken.Equals(logoutRequest.RefreshToken));
+            if (user == null)
+            {
+                throw new NotFoundException("Refresh token not found!");
+            }
+            user.RefreshToken = "";
+            _unitOfWork.GetRepository<User>().UpdateAsync(user);
+            bool isDelete = await _unitOfWork.CommitAsync() > 0;
+            return isDelete;
         }
 
-        public Task<RefreshTokenResponse> RefreshToken(RefreshTokenRequest refreshTokenRequest)
+        public async Task<RefreshTokenResponse> RefreshToken(RefreshTokenRequest refreshTokenRequest)
         {
-            throw new NotImplementedException();
+            var userEntity = await _unitOfWork.GetRepository<User>().SingleOrDefaultAsync(
+                                                            predicate: x => x.RefreshToken.Equals(refreshTokenRequest.RefreshToken)
+                                                            && x.RefreshTokenExpiry >= DateTime.Now);
+            if (userEntity == null)
+            {
+                throw new Exception("RefreshToken not found or expired");
+            }
+
+            userEntity.AccessToken = JWTHelper.GenerateToken(userEntity.Username, userEntity.Role!, _configuration["JWTSettings:Key"]!, _configuration["JWTSettings:Issuer"]!, _configuration["JWTSettings:Audience"]!);
+            userEntity.RefreshToken = JWTHelper.GenerateRefreshToken();
+
+            _unitOfWork.GetRepository<User>().UpdateAsync(userEntity);
+            bool isUpdate = await _unitOfWork.CommitAsync() > 0;
+            if (!isUpdate)
+            {
+                throw new Exception("Cannot insert new access token to DB");
+            }
+            return new RefreshTokenResponse() { AccessToken = userEntity.AccessToken, RefreshToken = userEntity.RefreshToken };
         }
 
         public async Task<bool> RegisterUser(RegisterRequest request)
