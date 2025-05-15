@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
 using Emeet.Domain.Entities;
 using Emeet.Domain.Enums;
+using Emeet.Domain.Exceptions;
 using Emeet.Domain.Interfaces;
 using Emeet.Service.DTOs.Requests.Authentication;
 using Emeet.Service.DTOs.Responses.Authentication;
+using Emeet.Service.Helpers;
 using Emeet.Service.Interfaces;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -31,9 +33,33 @@ namespace Emeet.Service.Services
             throw new NotImplementedException();
         }
 
-        public Task<LoginResponse> Login(string userName, string password)
+        public async Task<LoginResponse> LoginPassword(LoginPasswordRequest request)
         {
-            throw new NotImplementedException();
+            var account = await _unitOfWork.GetRepository<User>().SingleOrDefaultAsync(
+                predicate: u => u.Username.Equals(request.Username) && u.Password.Equals(request.Password));
+            // return null if user not found
+            if (account == null)
+            {
+                return null;
+            }
+            
+            // authentication successful so generate jwt token and refresh token
+            var accessToken = JWTHelper.GenerateToken(account.Username, account.Role!, _configuration["JWTSettings:Key"]!, _configuration["JWTSettings:Issuer"]!, _configuration["JWTSettings:Audience"]!);
+            var refreshToken = JWTHelper.GenerateRefreshToken();
+            account.RefreshToken = refreshToken;
+            account.AccessToken = accessToken;
+            account.RefreshTokenExpiry = DateTime.UtcNow.AddDays(30);
+            _unitOfWork.GetRepository<User>().UpdateAsync(account);
+
+            var response = _mapper.Map<LoginResponse>(account);
+
+            var expert = await _unitOfWork.GetRepository<Expert>().SingleOrDefaultAsync(predicate: x => x.UserId.Equals(account.Id));
+
+            if (expert != null)
+            {
+                response.ExpertInformation = _mapper.Map<ExpertInformation>(expert);
+            }
+            return response;
         }
 
         public Task<bool> Logout(LogoutRequest logoutRequest)

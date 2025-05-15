@@ -69,6 +69,7 @@ namespace Emeet.Infrastructure.Data
                 entity.Property(e => e.DateCreate).HasColumnName("date_create");
                 entity.Property(e => e.DateUpdated).HasColumnName("date_updated").IsRequired(false);
                 entity.Property(e => e.RefreshToken).HasMaxLength(255).HasColumnName("refresh_token").IsRequired(false);
+                entity.Property(e => e.AccessToken).HasMaxLength(255).HasColumnName("access_token").IsRequired(false);
                 entity.Property(e => e.RefreshTokenExpiry).HasColumnName("refresh_token_expiry").IsRequired(false);
                 entity.Property(e => e.Email).HasMaxLength(100).HasColumnName("email");
                 entity.Property(e => e.Status).HasMaxLength(20).HasColumnName("status");

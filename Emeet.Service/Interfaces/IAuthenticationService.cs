@@ -10,7 +10,7 @@ namespace Emeet.Service.Interfaces
 {
     public interface IAuthenticationService
     {
-        public Task<LoginResponse> Login(string userName, string password);
+        public Task<LoginResponse> LoginPassword(LoginPasswordRequest request);
         public Task<RefreshTokenResponse> RefreshToken(RefreshTokenRequest refreshTokenRequest);
         public Task<bool> Logout(LogoutRequest logoutRequest);
         public Task<FetchUserResponse> FetchUser(string accessToken);

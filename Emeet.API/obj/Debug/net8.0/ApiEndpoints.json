@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "Emeet.API.Controllers.AuthenticationController",
+    "Method": "LoginByPassword",
+    "RelativePath": "api/v1/auth/LoginByPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Emeet.Service.DTOs.Requests.Authentication.LoginPasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Emeet.API.Controllers.AuthenticationController",
     "Method": "RegisterAccount",
     "RelativePath": "api/v1/auth/RegisterAccount",
     "HttpMethod": "POST",

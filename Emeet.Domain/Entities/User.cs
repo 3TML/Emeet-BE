@@ -17,6 +17,7 @@ namespace Emeet.Domain.Entities
         public string Gender { get; set; }
         public DateTime DateCreate { get; set; }
         public DateTime? DateUpdated { get; set; }
+        public string? AccessToken { get; set; }
         public string? RefreshToken { get; set; }
         public DateTime? RefreshTokenExpiry { get; set; }
         public string Email { get; set; }
