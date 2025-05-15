@@ -107,7 +107,6 @@ namespace Emeet.Service.Services
             }
 
             userEntity.AccessToken = JWTHelper.GenerateToken(userEntity.Username, userEntity.Role!, _configuration["JWTSettings:Key"]!, _configuration["JWTSettings:Issuer"]!, _configuration["JWTSettings:Audience"]!);
-            userEntity.RefreshToken = JWTHelper.GenerateRefreshToken();
 
             _unitOfWork.GetRepository<User>().UpdateAsync(userEntity);
             bool isUpdate = await _unitOfWork.CommitAsync() > 0;
