@@ -41,24 +41,24 @@ namespace Emeet.Service.Services
             return otpKey;
         }
 
-        public async Task<bool> SendEmailAsync(SendOtpEmailRequest sendEmailRequest)
+        public async Task<bool> SendEmailOTPAsync(SendOtpEmailRequest sendEmailRequest)
         {
             var otpKey = GenerateOTP(6);
             // Send OTP to Email       
-            var emailBody = _configuration["EmailSetting:EmailBody"];
-            emailBody = emailBody.Replace("{PROJECT_NAME}", _configuration["Project_HairHub:PROJECT_NAME"]);
+            var emailBody = _configuration["EmailSetting:EmailVerifyOtpTemplate"];
+            emailBody = emailBody.Replace("{PROJECT_NAME}", _configuration["Project:Name"]);
             emailBody = emailBody.Replace("{FULL_NAME}", sendEmailRequest.FullName);
             emailBody = emailBody.Replace("{EXPIRE_TIME}", "2");
             emailBody = emailBody.Replace("{OTP}", otpKey);
-            emailBody = emailBody.Replace("{PHONE_NUMBER}", _configuration["Project_HairHub:PHONE_NUMBER"]);
-            emailBody = emailBody.Replace("{EMAIL_ADDRESS}", _configuration["Project_HairHub:EMAIL_ADDRESS"]);
+            emailBody = emailBody.Replace("{PHONE_NUMBER}", _configuration["Project:Phone"]);
+            emailBody = emailBody.Replace("{EMAIL_ADDRESS}", _configuration["Project:Email"]);
             var emailHost = _configuration["EmailSetting:EmailHost"];
             var userName = _configuration["EmailSetting:EmailUsername"];
             var password = _configuration["EmailSetting:EmailPassword"];
             var email = new MimeMessage();
             email.From.Add(MailboxAddress.Parse(emailHost));
             email.To.Add(MailboxAddress.Parse(sendEmailRequest.Email));
-            email.Subject = _configuration.GetSection("EmailSetting")?["Subject"];
+            email.Subject = "OTP veryfy email from Emeet";
             email.Body = new TextPart(TextFormat.Html)
             {
                 Text = emailBody
@@ -69,20 +69,37 @@ namespace Emeet.Service.Services
             await smtp.SendAsync(email);
             await smtp.DisconnectAsync(true);
             //InserDB
-            OTP otp = new OTP()
+            var otpEntity = await _unitOfWork.GetRepository<OTP>().SingleOrDefaultAsync(predicate: x => x.Email.Equals(sendEmailRequest.Email));
+            if (otpEntity == null)
             {
-                Id = Guid.NewGuid(),
-                Email = sendEmailRequest.Email,
-                OtpKey = otpKey,
-                CreatedTime = DateTime.Now,
-                ExpireTime = 2
-            };
-            otp.EndTime = otp.CreatedTime.GetValueOrDefault().AddMinutes(otp.ExpireTime ??= 2);
-            await _unitOfWork.GetRepository<OTP>().InsertAsync(otp);
-            bool isInsertAsync = await _unitOfWork.CommitAsync() > 0;
-            if (!isInsertAsync)
+                OTP otp = new OTP()
+                {
+                    Id = Guid.NewGuid(),
+                    Email = sendEmailRequest.Email,
+                    OtpKey = otpKey,
+                    CreatedTime = DateTime.Now,
+                    EndTime = DateTime.Now.AddMinutes(2),
+                    ExpireTime = 2
+                };
+                otp.EndTime = otp.CreatedTime.GetValueOrDefault().AddMinutes(otp.ExpireTime ??= 2);
+                await _unitOfWork.GetRepository<OTP>().InsertAsync(otp);
+                bool isInsertAsync = await _unitOfWork.CommitAsync() > 0;
+                if (!isInsertAsync)
+                {
+                    throw new Exception("Cannot insert otp to database");
+                }
+            }
+            else
             {
-                throw new Exception("Cannot insert otp to database");
+                otpEntity.OtpKey = otpKey;
+                otpEntity.CreatedTime = DateTime.Now;
+                otpEntity.EndTime = DateTime.Now.AddMinutes(2);
+                _unitOfWork.GetRepository<OTP>().UpdateAsync(otpEntity);
+                bool isUpdated = await _unitOfWork.CommitAsync() > 0;
+                if (!isUpdated)
+                {
+                    throw new Exception("Cannot update otp to database");
+                }
             }
             return true;
         }

@@ -107,22 +107,6 @@
   },
   {
     "ContainingType": "Emeet.API.Controllers.OTPController",
-    "Method": "CheckNonExistEmail",
-    "RelativePath": "api/v1/otp/CheckNonExistEmail",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "Emeet.Service.DTOs.Requests.Email.CheckExistEmailResrequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Emeet.API.Controllers.OTPController",
     "Method": "checkOtp",
     "RelativePath": "api/v1/otp/checkOtp",
     "HttpMethod": "POST",
