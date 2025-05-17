@@ -107,12 +107,54 @@
   },
   {
     "ContainingType": "Emeet.API.Controllers.ExpertController",
+    "Method": "GetExpertById",
+    "RelativePath": "api/v1/expert/GetExpertById/{ExperId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ExperId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Emeet.API.Controllers.ExpertController",
     "Method": "GetSugestionExperts",
     "RelativePath": "api/v1/expert/GetSugestionExperts",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Emeet.API.Controllers.FeedbackController",
+    "Method": "GetFeedbackExpert",
+    "RelativePath": "api/v1/feedback/GetFeedbackExpert/{ExpertId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ExpertId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "size",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {

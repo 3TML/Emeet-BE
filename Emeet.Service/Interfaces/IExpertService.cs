@@ -10,5 +10,6 @@ namespace Emeet.Service.Interfaces
     public interface IExpertService
     {
         Task<List<GetSuggestionExpert>> GetSuggestionExperts();
+        Task<GetExpertByIdResponse> GetExpertById(Guid expertId);
     }
 }

@@ -3,6 +3,7 @@ using Emeet.Domain.Entities;
 using Emeet.Service.DTOs.Requests.Authentication;
 using Emeet.Service.DTOs.Responses.Authentication;
 using Emeet.Service.DTOs.Responses.Category;
+using Emeet.Service.DTOs.Responses.Expert;
 using Emeet.Service.DTOs.Responses.User;
 using System;
 using System.Collections.Generic;
@@ -27,6 +28,9 @@ namespace Emeet.Service.Helpers
             CreateMap<User, LoginResponse>().ForMember(dest => dest.ExpertInformation, opt => opt.Ignore());
             //Expert
             CreateMap<Expert, ExpertInformation>().ReverseMap();
+            CreateMap<Expert, GetSuggestionExpert>().ReverseMap();
+            CreateMap<User, GetExpertByIdResponse>().ReverseMap();
+            CreateMap<Expert, GetExpertByIdResponse>().ReverseMap();
 
             //Category
             CreateMap<GetCategoryResponse, Category>().ReverseMap();

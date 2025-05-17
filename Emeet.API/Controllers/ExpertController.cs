@@ -29,5 +29,20 @@ namespace Emeet.API.Controllers
                 return BadRequest(new { message = ex.Message});
             }
         }
+
+        [HttpGet]
+        [Route("{ExperId}")]
+        public async Task<IActionResult> GetExpertById([FromRoute] Guid ExperId)
+        {
+            try
+            {
+                var experts = await _expertService.GetExpertById(ExperId);
+                return Ok(experts);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
     }
 }
