@@ -48,6 +48,20 @@ namespace Emeet.API.Controllers
         }
 
         [HttpPost]
+        public async Task<IActionResult> LoginGoogle([FromBody] LoginGoogleRequest request)
+        {
+            try
+            {
+                var result = await _authenticationService.LoginGoogle(request);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        [HttpPost]
         public async Task<IActionResult> GetAccessToken([FromBody] RefreshTokenRequest request)
         {
             try

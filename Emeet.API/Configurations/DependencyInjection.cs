@@ -21,6 +21,7 @@ namespace Emeet.API.Configurations
             services.AddScoped<IAuthenticationService, AuthenticationService>();
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IEmailService, EmailService>();
+            services.AddScoped<IUserService, UserService>();
 
 
             var mapperConfig = new MapperConfiguration(mc =>

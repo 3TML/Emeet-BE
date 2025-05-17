@@ -149,3 +149,9 @@ D:\DotnetReference\Emeet\Emeet.API\bin\Debug\net8.0\MimeKit.dll
 D:\DotnetReference\Emeet\Emeet.API\bin\Debug\net8.0\System.Formats.Asn1.dll
 D:\DotnetReference\Emeet\Emeet.API\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
 D:\DotnetReference\Emeet\Emeet.API\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+D:\DotnetReference\Emeet\Emeet.API\bin\Debug\net8.0\Google.Apis.dll
+D:\DotnetReference\Emeet\Emeet.API\bin\Debug\net8.0\Google.Apis.Auth.dll
+D:\DotnetReference\Emeet\Emeet.API\bin\Debug\net8.0\Google.Apis.Core.dll
+D:\DotnetReference\Emeet\Emeet.API\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\DotnetReference\Emeet\Emeet.API\bin\Debug\net8.0\System.Management.dll
+D:\DotnetReference\Emeet\Emeet.API\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Management.dll

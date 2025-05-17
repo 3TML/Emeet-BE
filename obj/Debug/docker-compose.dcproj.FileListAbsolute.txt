@@ -38,3 +38,9 @@ D:\DotnetReference\Emeet\bin\Debug\MimeKit.dll
 D:\DotnetReference\Emeet\bin\Debug\BouncyCastle.Cryptography.dll
 D:\DotnetReference\Emeet\bin\Debug\System.Formats.Asn1.dll
 D:\DotnetReference\Emeet\bin\Debug\System.Security.Cryptography.Pkcs.dll
+D:\DotnetReference\Emeet\bin\Debug\Google.Apis.Auth.dll
+D:\DotnetReference\Emeet\bin\Debug\Google.Apis.Core.dll
+D:\DotnetReference\Emeet\bin\Debug\Newtonsoft.Json.dll
+D:\DotnetReference\Emeet\bin\Debug\System.Management.dll
+D:\DotnetReference\Emeet\bin\Debug\Google.Apis.dll
+D:\DotnetReference\Emeet\bin\Debug\System.CodeDom.dll

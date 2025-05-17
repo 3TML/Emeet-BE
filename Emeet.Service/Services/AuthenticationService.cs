@@ -7,7 +7,9 @@ using Emeet.Service.DTOs.Requests.Authentication;
 using Emeet.Service.DTOs.Responses.Authentication;
 using Emeet.Service.Helpers;
 using Emeet.Service.Interfaces;
+using Google.Apis.Auth;
 using Microsoft.Extensions.Configuration;
+using Microsoft.SqlServer.Server;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +23,9 @@ namespace Emeet.Service.Services
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
         private readonly IConfiguration _configuration;
+
+        private string clientIdWeb = "246730582795-bldqe5o18il9nt127q03d8penomg7b9t.apps.googleusercontent.com";
+
         public AuthenticationService(IUnitOfWork unitOfWork, IMapper mapper, IConfiguration configuration)
         {
             _unitOfWork = unitOfWork;
@@ -162,6 +167,72 @@ namespace Emeet.Service.Services
 
             bool isInsert = await _unitOfWork.CommitAsync()>0;
             return isInsert;
+        }
+
+        public async Task<LoginResponse> LoginGoogle(LoginGoogleRequest checkLoginGoogle)
+        {
+            try
+            {
+                string clientId = clientIdWeb;
+                
+                // Xác thực token với Google
+                var payload = await GoogleJsonWebSignature.ValidateAsync(checkLoginGoogle.IdToken, new GoogleJsonWebSignature.ValidationSettings()
+                {
+                    Audience = new[] { clientId }
+                });
+
+                if (payload == null)
+                {
+                    throw new Exception("Không có dữ liệu từ Google API");
+                }
+                // Lấy thông tin người dùng từ payload
+
+                if (payload.Email == null)
+                {
+                    throw new Exception("Không có dữ liệu email từ Google API");
+                }
+                var email = payload.Email;
+                var account = await _unitOfWork.GetRepository<User>().SingleOrDefaultAsync(predicate: x => x.Username.Equals(email) && x.Status.Equals(UserStatus.Active));
+                if (account == null)
+                {
+                    throw new NotFoundException("Email không tồn tại trên hệ thống");
+                }
+                var accessToken = JWTHelper.GenerateToken(account.Username, account.Role, _configuration["JWTSettings:Key"]!, _configuration["JWTSettings:Issuer"]!, _configuration["JWTSettings:Audience"]!);
+                var refreshToken = JWTHelper.GenerateRefreshToken();
+
+                account.RefreshToken = refreshToken;
+                account.AccessToken = accessToken;
+                account.RefreshTokenExpiry = DateTime.UtcNow.AddDays(30);
+
+                _unitOfWork.GetRepository<User>().UpdateAsync(account);
+                bool isUpdate = await _unitOfWork.CommitAsync() > 0;
+                if (!isUpdate)
+                {
+                    throw new Exception("Login failed");
+                }
+
+                var response = _mapper.Map<LoginResponse>(account);
+
+                var expert = await _unitOfWork.GetRepository<Expert>().SingleOrDefaultAsync(predicate: x => x.UserId.Equals(account.Id));
+
+                if (expert != null)
+                {
+                    response.ExpertInformation = _mapper.Map<ExpertInformation>(expert);
+                }
+                return response;
+            }
+            catch (InvalidJwtException ex)
+            {
+                throw new Exception("Id Token hoặc JWT không hợp lệ");
+            }
+            catch (NotFoundException ex)
+            {
+                throw new NotFoundException(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
     }
 }

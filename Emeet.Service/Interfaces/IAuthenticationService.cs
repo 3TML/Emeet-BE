@@ -15,5 +15,6 @@ namespace Emeet.Service.Interfaces
         public Task<bool> Logout(LogoutRequest logoutRequest);
         public Task<LoginResponse> FetchUser(string accessToken);
         public Task<bool> RegisterUser(RegisterRequest request);
+        public Task<LoginResponse> LoginGoogle(LoginGoogleRequest checkLoginGoogle);
     }
 }

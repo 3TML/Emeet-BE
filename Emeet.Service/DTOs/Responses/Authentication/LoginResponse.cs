@@ -10,6 +10,7 @@ namespace Emeet.Service.DTOs.Responses.Authentication
     {
         public string Role { get; set; }
         public string Avatar { get; set; }
+        public string FullName { get; set; }
         public string? Bio { get; set; }
         public string Gender { get; set; }
         public DateTime DateCreate { get; set; }

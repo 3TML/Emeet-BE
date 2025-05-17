@@ -4,6 +4,7 @@ using Emeet.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Emeet.Infrastructure.Migrations
 {
     [DbContext(typeof(EmeetDbContext))]
-    partial class EmeetDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250517072745_Update User table in fullname fiel")]
+    partial class UpdateUsertableinfullnamefiel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -22,5 +22,10 @@
         {
             public const string OTPEndpoint = ApiEndpoint + "/otp";
         }
+
+        public static class User
+        {
+            public const string UserEndpoint = ApiEndpoint + "/user";
+        }
     }
 }

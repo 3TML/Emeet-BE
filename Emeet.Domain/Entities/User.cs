@@ -11,6 +11,7 @@ namespace Emeet.Domain.Entities
         public Guid Id { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
+        public string FullName { get; set; }
         public string Role { get; set; }
         public string Avatar { get; set; }
         public string? Bio { get; set; }
