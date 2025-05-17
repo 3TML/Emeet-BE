@@ -3,6 +3,7 @@ using Emeet.Domain.Entities;
 using Emeet.Service.DTOs.Requests.Authentication;
 using Emeet.Service.DTOs.Responses.Authentication;
 using Emeet.Service.DTOs.Responses.Category;
+using Emeet.Service.DTOs.Responses.User;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,12 +18,18 @@ namespace Emeet.Service.Helpers
     {
         public AutoMapperProfile()
         {
-            CreateMap<GetCategoryResponse, Category>().ReverseMap();
+            //User
             CreateMap<RegisterRequest, User>().ReverseMap();
+            CreateMap<GetUserResponse, User>().ReverseMap();
+
+            //Authentication
             CreateMap<RegisterRequest, Expert>().ReverseMap();
             CreateMap<User, LoginResponse>().ForMember(dest => dest.ExpertInformation, opt => opt.Ignore());
+            //Expert
             CreateMap<Expert, ExpertInformation>().ReverseMap();
 
+            //Category
+            CreateMap<GetCategoryResponse, Category>().ReverseMap();
         }
     }
 }

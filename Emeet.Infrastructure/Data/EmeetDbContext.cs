@@ -20,7 +20,7 @@ namespace Emeet.Infrastructure.Data
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-            //optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnectionString"));
+           // optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnectionString"));
             optionsBuilder.UseSqlServer(configuration.GetConnectionString("ServerConnectionString"));
         }
 

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Emeet.Domain.Interfaces;
+using Emeet.Domain.Specifications;
 using Emeet.Infrastructure.Repository;
 using Emeet.Infrastructure.UnitOfWork;
 using Emeet.Service.Helpers;
@@ -23,6 +24,7 @@ namespace Emeet.API.Configurations
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<IUserService, UserService>();
 
+            services.AddScoped(typeof(IPaginate<>), typeof(Paginate<>));
 
             var mapperConfig = new MapperConfiguration(mc =>
             {
