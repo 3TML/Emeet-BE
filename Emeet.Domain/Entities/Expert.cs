@@ -12,7 +12,7 @@ namespace Emeet.Domain.Entities
         public Guid UserId { get; set; }
         public string Experience { get; set; }
         public decimal PricePerMinute { get; set; }
-        public int TotalPreview { get; set; }
+        public int TotalReview { get; set; }
         public decimal Rate { get; set; }
         public decimal TotalRate { get; set; }
         public string Status { get; set; }

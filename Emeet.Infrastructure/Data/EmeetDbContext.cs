@@ -74,7 +74,6 @@ namespace Emeet.Infrastructure.Data
                 entity.Property(e => e.RefreshTokenExpiry).HasColumnName("refresh_token_expiry").IsRequired(false);
                 entity.Property(e => e.Email).HasMaxLength(100).HasColumnName("email");
                 entity.Property(e => e.Status).HasMaxLength(20).HasColumnName("status");
-                entity.Property(e => e.IsExpert).HasColumnName("is_expert");
                 entity.Property(e => e.Gender).HasMaxLength(25).HasColumnName("gender");
             });
             modelBuilder.Entity<Category>(entity =>
@@ -98,7 +97,7 @@ namespace Emeet.Infrastructure.Data
                 entity.Property(e => e.UserId).HasColumnName("user_id");
                 entity.Property(e => e.Experience).HasMaxLength(255).HasColumnName("experience");
                 entity.Property(e => e.PricePerMinute).HasColumnName("price_per_minute");
-                entity.Property(e => e.TotalPreview).HasColumnName("total_preview");
+                entity.Property(e => e.TotalReview).HasColumnName("total_review");
                 entity.Property(e => e.Rate).HasColumnName("rate");
                 entity.Property(e => e.TotalRate).HasColumnName("total_rate");
                 entity.Property(e => e.Status).HasMaxLength(25).HasColumnName("status");

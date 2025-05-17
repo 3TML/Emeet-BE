@@ -136,14 +136,13 @@ namespace Emeet.Service.Services
             account.DateCreate = DateTime.UtcNow;
             account.Email = request.Username;
             account.Status = UserStatus.Active;
-            account.IsExpert = false;
+            account.FullName = request.FullName;
             if (request.IsExpert != null && request.IsExpert == true)
             {
-                account.IsExpert = true;
                 var expert = _mapper.Map<Expert>(request);
                 expert.Id = Guid.NewGuid();
                 expert.UserId = account.Id;
-                expert.TotalPreview = 0;
+                expert.TotalReview = 0;
                 expert.Rate = 0;
                 expert.TotalRate = 0;
                 expert.Status = ExpertStatus.Active;

@@ -18,7 +18,7 @@ namespace Emeet.API.Controllers
         }
 
         [HttpGet]
-        //[Authorize(Roles = RoleNameAuthor.Admin)]
+        [Authorize(Roles = RoleNameAuthor.Admin)]
         public async Task<IActionResult> GetAllUser([FromQuery] string fullName = "",[FromQuery] string role = "", [FromQuery] int page = 1, [FromQuery] int size = 10)
         {
             try

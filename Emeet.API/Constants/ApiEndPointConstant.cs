@@ -27,5 +27,26 @@
         {
             public const string UserEndpoint = ApiEndpoint + "/user";
         }
+        public static class Expert
+        {
+            public const string ExpertEndpoint = ApiEndpoint + "/expert";
+        }
+        public static class Appointment
+        {
+            public const string AppointmentEndpoint = ApiEndpoint + "/appointment";
+        }
+        public static class Schedule
+        {
+            public const string ScheduleEndpoint = ApiEndpoint + "/schedule";
+        }
+        public static class Feedback
+        {
+            public const string FeedbackEndpoint = ApiEndpoint + "/feedback";
+        }
+        public static class Payment
+        {
+            public const string PaymentEndpoint = ApiEndpoint + "/payment";
+        }
+
     }
 }

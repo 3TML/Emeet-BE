@@ -23,7 +23,6 @@ namespace Emeet.Domain.Entities
         public DateTime? RefreshTokenExpiry { get; set; }
         public string Email { get; set; }
         public string Status { get; set; }
-        public bool IsExpert { get; set; }
 
         public virtual ICollection<Expert> Experts { get; set; }
         public virtual ICollection<Appointment> Appointments { get; set; }

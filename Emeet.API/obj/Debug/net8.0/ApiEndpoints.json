@@ -106,6 +106,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Emeet.API.Controllers.ExpertController",
+    "Method": "GetSugestionExperts",
+    "RelativePath": "api/v1/expert/GetSugestionExperts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Emeet.API.Controllers.OTPController",
     "Method": "CheckExistEmail",
     "RelativePath": "api/v1/otp/CheckExistEmail",

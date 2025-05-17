@@ -23,6 +23,8 @@ namespace Emeet.API.Configurations
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IExpertService, ExpertService>();
+            services.AddScoped<IAppointmentService, AppointmentService>();
 
             services.AddScoped(typeof(IPaginate<>), typeof(Paginate<>));
 
