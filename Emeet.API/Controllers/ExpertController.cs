@@ -31,12 +31,26 @@ namespace Emeet.API.Controllers
         }
 
         [HttpGet]
-        [Route("{ExperId}")]
-        public async Task<IActionResult> GetExpertById([FromRoute] Guid ExperId)
+        [Route("{experId}")]
+        public async Task<IActionResult> GetExpertById([FromRoute] Guid experId)
         {
             try
             {
-                var experts = await _expertService.GetExpertById(ExperId);
+                var experts = await _expertService.GetExpertById(experId);
+                return Ok(experts);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetExpertByNameAndCategory([FromQuery] string name = "", [FromQuery] string catrgory = "", [FromQuery] int page = 1, [FromQuery] int size = 10)
+        {
+            try
+            {
+                var experts = await _expertService.GetExpertByNameCategory(name, catrgory, page, size);
                 return Ok(experts);
             }
             catch (Exception ex)

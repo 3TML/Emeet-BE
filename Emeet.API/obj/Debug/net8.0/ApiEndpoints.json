@@ -108,15 +108,46 @@
   {
     "ContainingType": "Emeet.API.Controllers.ExpertController",
     "Method": "GetExpertById",
-    "RelativePath": "api/v1/expert/GetExpertById/{ExperId}",
+    "RelativePath": "api/v1/expert/GetExpertById/{experId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "ExperId",
+        "Name": "experId",
         "Type": "System.Guid",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Emeet.API.Controllers.ExpertController",
+    "Method": "GetExpertByNameAndCategory",
+    "RelativePath": "api/v1/expert/GetExpertByNameAndCategory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "catrgory",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "size",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

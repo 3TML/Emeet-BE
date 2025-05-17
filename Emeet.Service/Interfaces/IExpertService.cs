@@ -1,4 +1,5 @@
-﻿using Emeet.Service.DTOs.Responses.Expert;
+﻿using Emeet.Domain.Specifications;
+using Emeet.Service.DTOs.Responses.Expert;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,6 @@ namespace Emeet.Service.Interfaces
     {
         Task<List<GetSuggestionExpert>> GetSuggestionExperts();
         Task<GetExpertByIdResponse> GetExpertById(Guid expertId);
+        Task<IPaginate<GetExpertResponse>> GetExpertByNameCategory(string name, string category, int page, int size);
     }
 }

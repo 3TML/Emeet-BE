@@ -31,6 +31,16 @@ namespace Emeet.Service.Helpers
             CreateMap<Expert, GetSuggestionExpert>().ReverseMap();
             CreateMap<User, GetExpertByIdResponse>().ReverseMap();
             CreateMap<Expert, GetExpertByIdResponse>().ReverseMap();
+            CreateMap<User, GetExpertResponse>()
+                .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.FullName))
+                .ForMember(dest => dest.Gender, opt => opt.MapFrom(src => src.Gender))
+                .ForMember(dest => dest.Avatar, opt => opt.MapFrom(src => src.Avatar))
+                .ForMember(dest => dest.Bio, opt => opt.MapFrom(src => src.Bio))
+                .ForMember(dest => dest.Experience, opt => opt.MapFrom(src => src.Experts.FirstOrDefault().Experience))
+                .ForMember(dest => dest.Rate, opt => opt.MapFrom(src => src.Experts.FirstOrDefault().Rate))
+                .ForMember(dest => dest.TotalPreview, opt => opt.MapFrom(src => src.Experts.FirstOrDefault().TotalReview))
+                .ForMember(dest => dest.ListCategory, opt => opt.MapFrom(src =>
+                    src.Experts.FirstOrDefault().ExpertCategories.Select(c => c.Category.Name).ToList()));
 
             //Category
             CreateMap<GetCategoryResponse, Category>().ReverseMap();

@@ -2,6 +2,7 @@
 using Emeet.Domain.Entities;
 using Emeet.Domain.Enums;
 using Emeet.Domain.Interfaces;
+using Emeet.Domain.Specifications;
 using Emeet.Service.DTOs.Responses.Expert;
 using Emeet.Service.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -34,6 +35,26 @@ namespace Emeet.Service.Services
             result = _mapper.Map<GetExpertByIdResponse>(user.Experts.SingleOrDefault());
 
             return result;
+        }
+
+        public async Task<IPaginate<GetExpertResponse>> GetExpertByNameCategory(string name, string category, int page, int size)
+        {
+            var user = await _unitOfWork.GetRepository<User>().GetPagingListAsync(
+                                                                    predicate: x=>x.FullName.Contains(name) 
+                                                                                && x.Experts.Any(s=>s.ExpertCategories.Any(s=>s.Category.Name.Contains(category))),
+                                                                    page: page,
+                                                                    size: size,
+                                                                    include: q => q.Include(u => u.Experts)
+                                                                                    .ThenInclude(e => e.ExpertCategories)
+                                                                                        .ThenInclude(ec => ec.Category)
+                                                                 );
+            return new Paginate<GetExpertResponse>()
+            {
+                Page = user.Page,
+                Size = user.Size,
+                TotalPages = user.TotalPages,
+                Items = _mapper.Map<IList<GetExpertResponse>>(user.Items)
+            };
         }
 
         public async Task<List<GetSuggestionExpert>> GetSuggestionExperts()
