@@ -266,5 +266,51 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Emeet.API.Controllers.UserController",
+    "Method": "UpdateProfileById",
+    "RelativePath": "api/v1/user/UpdateProfileById/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "FullName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Avatar",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Bio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Gender",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdateExpertRequest.Experience",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdateExpertRequest.PricePerMinute",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

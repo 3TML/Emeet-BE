@@ -1,4 +1,5 @@
 ﻿using Emeet.Domain.Specifications;
+using Emeet.Service.DTOs.Requests.User;
 using Emeet.Service.DTOs.Responses.Expert;
 using System;
 using System.Collections.Generic;

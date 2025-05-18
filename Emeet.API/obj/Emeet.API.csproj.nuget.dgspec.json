@@ -333,6 +333,10 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "CloudinaryDotNet": {
+              "target": "Package",
+              "version": "[1.27.5, )"
+            },
             "Google.Apis.Auth": {
               "target": "Package",
               "version": "[1.69.0, )"
@@ -340,6 +344,10 @@
             "MailKit": {
               "target": "Package",
               "version": "[4.12.0, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.3.0, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
