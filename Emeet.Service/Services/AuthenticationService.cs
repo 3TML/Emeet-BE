@@ -24,7 +24,7 @@ namespace Emeet.Service.Services
         private readonly IMapper _mapper;
         private readonly IConfiguration _configuration;
 
-        private string clientIdWeb = "246730582795-bldqe5o18il9nt127q03d8penomg7b9t.apps.googleusercontent.com";
+        private string clientIdWeb = "190054359249-e9qgvopco4osh7qacqfk7pjiiuub3kr1.apps.googleusercontent.com";
 
         public AuthenticationService(IUnitOfWork unitOfWork, IMapper mapper, IConfiguration configuration)
         {
