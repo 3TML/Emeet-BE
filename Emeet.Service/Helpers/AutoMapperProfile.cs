@@ -1,10 +1,12 @@
 ﻿using AutoMapper;
 using Emeet.Domain.Entities;
 using Emeet.Service.DTOs.Requests.Authentication;
+using Emeet.Service.DTOs.Requests.ExpertService;
 using Emeet.Service.DTOs.Requests.Schedule;
 using Emeet.Service.DTOs.Responses.Authentication;
 using Emeet.Service.DTOs.Responses.Category;
 using Emeet.Service.DTOs.Responses.Expert;
+using Emeet.Service.DTOs.Responses.ExpertService;
 using Emeet.Service.DTOs.Responses.Schedule;
 using Emeet.Service.DTOs.Responses.User;
 using System;
@@ -38,12 +40,16 @@ namespace Emeet.Service.Helpers
                 .ForMember(dest => dest.Gender, opt => opt.MapFrom(src => src.Gender))
                 .ForMember(dest => dest.Avatar, opt => opt.MapFrom(src => src.Avatar))
                 .ForMember(dest => dest.Bio, opt => opt.MapFrom(src => src.Bio))
-                .ForMember(dest => dest.Experience, opt => opt.MapFrom(src => src.Experts.FirstOrDefault().Experience))
-                .ForMember(dest => dest.Rate, opt => opt.MapFrom(src => src.Experts.FirstOrDefault().Rate))
-                .ForMember(dest => dest.TotalPreview, opt => opt.MapFrom(src => src.Experts.FirstOrDefault().TotalReview))
+                .ForMember(dest => dest.Experience, opt => opt.MapFrom(src => src.Experts.FirstOrDefault()!.Experience))
+                .ForMember(dest => dest.Rate, opt => opt.MapFrom(src => src.Experts.FirstOrDefault()!.Rate))
+                .ForMember(dest => dest.TotalPreview, opt => opt.MapFrom(src => src.Experts.FirstOrDefault()!.TotalReview))
                 .ForMember(dest => dest.ListCategory, opt => opt.MapFrom(src =>
                     src.Experts.FirstOrDefault().ExpertCategories.Select(c => c.Category.Name).ToList()));
             CreateMap<GetCertificatesResponse, Expert>().ReverseMap();
+
+            //Service
+            CreateMap<ExService, CreateServiceRequest>().ReverseMap();
+            CreateMap<ExService, ExServiceResponse>().ReverseMap();
 
             //Category
             CreateMap<GetCategoryResponse, Category>().ReverseMap();

@@ -16,6 +16,5 @@ namespace Emeet.Service.DTOs.Requests.Authentication
         public bool IsExpert { get; set; }
         public List<Guid>? ListCategoryId { get; set; }
         public string? Experience { get; set; }
-        public decimal? PricePerMinute { get; set; }
     }
 }

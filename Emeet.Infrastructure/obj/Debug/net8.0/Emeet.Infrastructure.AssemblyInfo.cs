@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Emeet.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+343084a65aa02d3f8c6bb48a2a1bdb7f6369592d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a462879abe7ea9da16e86b3bde246b83b8d6be43")]
 [assembly: System.Reflection.AssemblyProductAttribute("Emeet.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Emeet.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

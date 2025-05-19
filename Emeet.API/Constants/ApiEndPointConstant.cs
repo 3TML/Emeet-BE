@@ -47,6 +47,9 @@
         {
             public const string PaymentEndpoint = ApiEndpoint + "/payment";
         }
-
+        public static class ExService
+        {
+            public const string ExpertServiceEndpoint = ApiEndpoint + "/ex_service";
+        }
     }
 }

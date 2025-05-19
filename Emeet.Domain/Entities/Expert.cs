@@ -11,7 +11,6 @@ namespace Emeet.Domain.Entities
         public Guid Id { get; set; }
         public Guid UserId { get; set; }
         public string Experience { get; set; }
-        public decimal PricePerMinute { get; set; }
         public int TotalReview { get; set; }
         public decimal Rate { get; set; }
         public decimal TotalRate { get; set; }
@@ -23,5 +22,6 @@ namespace Emeet.Domain.Entities
         public virtual ICollection<Feedback> Feedbacks { get; set; }
         public virtual ICollection<StaticFile> StaticFiles { get; set; }
         public virtual ICollection<Schedule> Schedules { get; set; }
+        public virtual ICollection<ExService> ExpertServices { get; set; }
     }
 }

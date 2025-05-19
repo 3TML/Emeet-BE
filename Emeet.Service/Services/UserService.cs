@@ -71,7 +71,6 @@ namespace Emeet.Service.Services
             {
                 var expert = await _unitOfWork.GetRepository<Expert>().SingleOrDefaultAsync(predicate: x => x.UserId == id);
                 expert.Experience = updateUserRequest.UpdateExpertRequest.Experience ?? expert.Experience;
-                expert.PricePerMinute = updateUserRequest.UpdateExpertRequest.PricePerMinute ?? expert.PricePerMinute;
                 _unitOfWork.GetRepository<Expert>().UpdateAsync(expert);
             }
 

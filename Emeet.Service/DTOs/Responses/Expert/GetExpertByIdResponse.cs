@@ -18,7 +18,6 @@ namespace Emeet.Service.DTOs.Responses.Expert
         public string Status { get; set; }
 
         public string Experience { get; set; }
-        public decimal PricePerMinute { get; set; }
         public int TotalReview { get; set; }
         public decimal Rate { get; set; }
     }

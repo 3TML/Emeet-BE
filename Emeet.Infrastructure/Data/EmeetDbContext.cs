@@ -20,8 +20,8 @@ namespace Emeet.Infrastructure.Data
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-            //optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnectionString"));
-            optionsBuilder.UseSqlServer(configuration.GetConnectionString("ServerConnectionString"));
+            optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnectionString"));
+            //optionsBuilder.UseSqlServer(configuration.GetConnectionString("ServerConnectionString"));
         }
 
         public virtual DbSet<User> Users { get; set; }
@@ -96,7 +96,6 @@ namespace Emeet.Infrastructure.Data
                 entity.Property(e => e.Id).HasColumnName("id");
                 entity.Property(e => e.UserId).HasColumnName("user_id");
                 entity.Property(e => e.Experience).HasMaxLength(255).HasColumnName("experience");
-                entity.Property(e => e.PricePerMinute).HasColumnName("price_per_minute");
                 entity.Property(e => e.TotalReview).HasColumnName("total_review");
                 entity.Property(e => e.Rate).HasColumnName("rate");
                 entity.Property(e => e.TotalRate).HasColumnName("total_rate");
@@ -182,6 +181,7 @@ namespace Emeet.Infrastructure.Data
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_feedback_expert");
             });
+
             modelBuilder.Entity<Payment>(entity =>
             {
                 entity.ToTable("payment");
@@ -231,7 +231,7 @@ namespace Emeet.Infrastructure.Data
                 entity.Property(e => e.DayOfMonth).HasMaxLength(25).HasColumnName("day_of_month");
                 entity.Property(e => e.StartTime)
                       .HasColumnName("start_time")
-                      .HasColumnType("time") 
+                      .HasColumnType("time")
                       .IsRequired(false);
                 entity.Property(e => e.EndTime)
                       .HasColumnName("end_time")
@@ -244,6 +244,55 @@ namespace Emeet.Infrastructure.Data
                     .HasForeignKey(d => d.ExpertId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_schedule_expert");
+            });
+
+            modelBuilder.Entity<ExService>(entity =>
+            {
+                entity.ToTable("Service");
+
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.Name)
+                      .IsRequired()
+                      .HasMaxLength(50)
+                      .HasColumnName("name");
+
+                entity.Property(e => e.Description)
+                      .IsRequired()
+                      .HasMaxLength(250)
+                      .HasColumnName("description");
+
+                entity.Property(e => e.Time)
+                      .HasColumnType("decimal")
+                      .HasColumnName("time");
+
+                entity.Property(e => e.Price)
+                      .HasColumnType("decimal")
+                      .HasColumnName("price");
+
+                entity.Property(e => e.ExpertId)
+                      .HasColumnName("expert_id");
+
+                entity.Property(e => e.Status)
+                      .IsRequired()
+                      .HasMaxLength(20)
+                      .HasColumnName("status");
+
+                entity.Property(e => e.CreatedAt)
+                      .HasColumnName("created_at")
+                      .HasColumnType("datetime")
+                      .IsRequired();
+
+                entity.Property(e => e.UpdatedAt)
+                      .HasColumnName("updated_at")
+                      .HasColumnType("datetime")
+                      .IsRequired(false);
+
+                entity.HasOne(s => s.Expert)
+                      .WithMany(e => e.ExpertServices)
+                      .HasForeignKey(s => s.ExpertId)
+                      .OnDelete(DeleteBehavior.Cascade)
+                      .HasConstraintName("FK_exservice_expert");
             });
         }
     }

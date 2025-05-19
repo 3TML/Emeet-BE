@@ -4,6 +4,7 @@ using Emeet.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Emeet.Infrastructure.Migrations
 {
     [DbContext(typeof(EmeetDbContext))]
-    partial class EmeetDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250519123515_Update table Expert")]
+    partial class UpdatetableExpert
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -105,57 +108,6 @@ namespace Emeet.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("category", (string)null);
-                });
-
-            modelBuilder.Entity("Emeet.Domain.Entities.ExService", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime")
-                        .HasColumnName("created_at");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)")
-                        .HasColumnName("description");
-
-                    b.Property<Guid>("ExpertId")
-                        .HasColumnType("uniqueidentifier")
-                        .HasColumnName("expert_id");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasColumnName("name");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal")
-                        .HasColumnName("price");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)")
-                        .HasColumnName("status");
-
-                    b.Property<decimal>("Time")
-                        .HasColumnType("decimal")
-                        .HasColumnName("time");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime")
-                        .HasColumnName("updated_at");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ExpertId");
-
-                    b.ToTable("Service", (string)null);
                 });
 
             modelBuilder.Entity("Emeet.Domain.Entities.Expert", b =>
@@ -521,18 +473,6 @@ namespace Emeet.Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Emeet.Domain.Entities.ExService", b =>
-                {
-                    b.HasOne("Emeet.Domain.Entities.Expert", "Expert")
-                        .WithMany("ExpertServices")
-                        .HasForeignKey("ExpertId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("FK_exservice_expert");
-
-                    b.Navigation("Expert");
-                });
-
             modelBuilder.Entity("Emeet.Domain.Entities.Expert", b =>
                 {
                     b.HasOne("Emeet.Domain.Entities.User", "User")
@@ -632,8 +572,6 @@ namespace Emeet.Infrastructure.Migrations
                     b.Navigation("Appointments");
 
                     b.Navigation("ExpertCategories");
-
-                    b.Navigation("ExpertServices");
 
                     b.Navigation("Feedbacks");
 
