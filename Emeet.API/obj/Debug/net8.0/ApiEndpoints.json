@@ -300,6 +300,59 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Emeet.API.Controllers.ScheduleController",
+    "Method": "CreateSchedule",
+    "RelativePath": "api/v1/schedule/CreateSchedule",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Emeet.Service.DTOs.Requests.Schedule.CreateScheduleRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Emeet.API.Controllers.ScheduleController",
+    "Method": "GetScheduleByExpertId",
+    "RelativePath": "api/v1/schedule/GetScheduleByExpertId/{expertId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "expertId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Emeet.API.Controllers.ScheduleController",
+    "Method": "UpdateSchedule",
+    "RelativePath": "api/v1/schedule/UpdateSchedule/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Emeet.Service.DTOs.Requests.Schedule.UpdateScheduleRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Emeet.API.Controllers.UserController",
     "Method": "GetAllUser",
     "RelativePath": "api/v1/user/GetAllUser",

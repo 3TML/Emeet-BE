@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
 using Emeet.Domain.Entities;
 using Emeet.Service.DTOs.Requests.Authentication;
+using Emeet.Service.DTOs.Requests.Schedule;
 using Emeet.Service.DTOs.Responses.Authentication;
 using Emeet.Service.DTOs.Responses.Category;
 using Emeet.Service.DTOs.Responses.Expert;
+using Emeet.Service.DTOs.Responses.Schedule;
 using Emeet.Service.DTOs.Responses.User;
 using System;
 using System.Collections.Generic;
@@ -45,6 +47,12 @@ namespace Emeet.Service.Helpers
 
             //Category
             CreateMap<GetCategoryResponse, Category>().ReverseMap();
+
+            //Schedule
+            CreateMap<Schedule, ScheduleInformation>().ReverseMap();
+            CreateMap<Schedule, GetScheduleResponse>()
+                .ForMember(dest => dest.StartTime, opt => opt.MapFrom(src => src.StartTime.HasValue ? src.StartTime.Value.ToString(@"hh\:mm") : null))
+                .ForMember(dest => dest.EndTime, opt => opt.MapFrom(src => src.EndTime.HasValue ? src.EndTime.Value.ToString(@"hh\:mm") : null));
         }
     }
 }

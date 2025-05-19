@@ -44,3 +44,5 @@ D:\DotnetReference\Emeet\bin\Debug\Newtonsoft.Json.dll
 D:\DotnetReference\Emeet\bin\Debug\System.Management.dll
 D:\DotnetReference\Emeet\bin\Debug\Google.Apis.dll
 D:\DotnetReference\Emeet\bin\Debug\System.CodeDom.dll
+D:\DotnetReference\Emeet\bin\Debug\Microsoft.Extensions.Options.dll
+D:\DotnetReference\Emeet\bin\Debug\CloudinaryDotNet.dll

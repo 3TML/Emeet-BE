@@ -20,7 +20,7 @@ namespace Emeet.Infrastructure.Data
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-           // optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnectionString"));
+            //optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnectionString"));
             optionsBuilder.UseSqlServer(configuration.GetConnectionString("ServerConnectionString"));
         }
 
@@ -229,8 +229,14 @@ namespace Emeet.Infrastructure.Data
                 entity.Property(e => e.Id).HasColumnName("id");
                 entity.Property(e => e.ExpertId).HasColumnName("expert_id");
                 entity.Property(e => e.DayOfMonth).HasMaxLength(25).HasColumnName("day_of_month");
-                entity.Property(e => e.StartTime).HasColumnName("start_time");
-                entity.Property(e => e.EndTime).HasColumnName("end_time");
+                entity.Property(e => e.StartTime)
+                      .HasColumnName("start_time")
+                      .HasColumnType("time") 
+                      .IsRequired(false);
+                entity.Property(e => e.EndTime)
+                      .HasColumnName("end_time")
+                      .HasColumnType("time")
+                      .IsRequired(false);
                 entity.Property(e => e.Status).HasColumnName("status");
 
                 entity.HasOne(d => d.Expert)

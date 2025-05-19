@@ -4,17 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Emeet.Domain.Entities
+namespace Emeet.Service.DTOs.Responses.Schedule
 {
-    public class Schedule
+    public class GetScheduleResponse
     {
         public Guid Id { get; set; }
-        public Guid ExpertId { get; set; }
         public string DayOfMonth { get; set; }
-        public TimeSpan? StartTime { get; set; }
-        public TimeSpan? EndTime { get; set; }
+        public string? StartTime { get; set; }
+        public string? EndTime { get; set; }
         public bool Status { get; set; }
-
-        public virtual Expert Expert { get; set; }
     }
 }
