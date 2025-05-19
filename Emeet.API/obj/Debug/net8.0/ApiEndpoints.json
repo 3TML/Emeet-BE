@@ -107,6 +107,48 @@
   },
   {
     "ContainingType": "Emeet.API.Controllers.ExpertController",
+    "Method": "DeleteCertificates",
+    "RelativePath": "api/v1/expert/DeleteCertificates",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteCertificate",
+        "Type": "Emeet.Service.DTOs.Requests.Expert.DeleteCertificateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Emeet.API.Controllers.ExpertController",
+    "Method": "GetCertificatesByExpertId",
+    "RelativePath": "api/v1/expert/GetCertificatesByExpertId/{expertId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "expertId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "size",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Emeet.API.Controllers.ExpertController",
     "Method": "GetExpertById",
     "RelativePath": "api/v1/expert/GetExpertById/{experId}",
     "HttpMethod": "GET",
@@ -160,6 +202,27 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Emeet.API.Controllers.ExpertController",
+    "Method": "UploadCertificates",
+    "RelativePath": "api/v1/expert/UploadCertificates",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ExpertId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "Certificates",
+        "Type": "System.Collections.Generic.IList\u00601[[Microsoft.AspNetCore.Http.IFormFile, Microsoft.AspNetCore.Http.Features, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {

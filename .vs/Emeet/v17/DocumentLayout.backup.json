@@ -3,12 +3,64 @@
   "WorkspaceRootPath": "D:\\DotnetReference\\Emeet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}|Emeet.Service\\Emeet.Service.csproj|d:\\dotnetreference\\emeet\\emeet.service\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}|Emeet.Service\\Emeet.Service.csproj|solutionrelative:emeet.service\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1EA1DC6C-2A5F-475D-8161-E5A0EAE62439}|Emeet.Infrastructure\\Emeet.Infrastructure.csproj|d:\\dotnetreference\\emeet\\emeet.infrastructure\\data\\emeetdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1EA1DC6C-2A5F-475D-8161-E5A0EAE62439}|Emeet.Infrastructure\\Emeet.Infrastructure.csproj|solutionrelative:emeet.infrastructure\\data\\emeetdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26A5900B-0D17-467E-B2A0-14C9D85FF22D}|Emeet.Domain\\Emeet.Domain.csproj|d:\\dotnetreference\\emeet\\emeet.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26A5900B-0D17-467E-B2A0-14C9D85FF22D}|Emeet.Domain\\Emeet.Domain.csproj|solutionrelative:emeet.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26A5900B-0D17-467E-B2A0-14C9D85FF22D}|Emeet.Domain\\Emeet.Domain.csproj|d:\\dotnetreference\\emeet\\emeet.domain\\entities\\staticfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26A5900B-0D17-467E-B2A0-14C9D85FF22D}|Emeet.Domain\\Emeet.Domain.csproj|solutionrelative:emeet.domain\\entities\\staticfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26A5900B-0D17-467E-B2A0-14C9D85FF22D}|Emeet.Domain\\Emeet.Domain.csproj|d:\\dotnetreference\\emeet\\emeet.domain\\entities\\schedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26A5900B-0D17-467E-B2A0-14C9D85FF22D}|Emeet.Domain\\Emeet.Domain.csproj|solutionrelative:emeet.domain\\entities\\schedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26A5900B-0D17-467E-B2A0-14C9D85FF22D}|Emeet.Domain\\Emeet.Domain.csproj|d:\\dotnetreference\\emeet\\emeet.domain\\entities\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26A5900B-0D17-467E-B2A0-14C9D85FF22D}|Emeet.Domain\\Emeet.Domain.csproj|solutionrelative:emeet.domain\\entities\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26A5900B-0D17-467E-B2A0-14C9D85FF22D}|Emeet.Domain\\Emeet.Domain.csproj|d:\\dotnetreference\\emeet\\emeet.domain\\entities\\otp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26A5900B-0D17-467E-B2A0-14C9D85FF22D}|Emeet.Domain\\Emeet.Domain.csproj|solutionrelative:emeet.domain\\entities\\otp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26A5900B-0D17-467E-B2A0-14C9D85FF22D}|Emeet.Domain\\Emeet.Domain.csproj|d:\\dotnetreference\\emeet\\emeet.domain\\entities\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26A5900B-0D17-467E-B2A0-14C9D85FF22D}|Emeet.Domain\\Emeet.Domain.csproj|solutionrelative:emeet.domain\\entities\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26A5900B-0D17-467E-B2A0-14C9D85FF22D}|Emeet.Domain\\Emeet.Domain.csproj|d:\\dotnetreference\\emeet\\emeet.domain\\entities\\expertcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26A5900B-0D17-467E-B2A0-14C9D85FF22D}|Emeet.Domain\\Emeet.Domain.csproj|solutionrelative:emeet.domain\\entities\\expertcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26A5900B-0D17-467E-B2A0-14C9D85FF22D}|Emeet.Domain\\Emeet.Domain.csproj|d:\\dotnetreference\\emeet\\emeet.domain\\entities\\expert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26A5900B-0D17-467E-B2A0-14C9D85FF22D}|Emeet.Domain\\Emeet.Domain.csproj|solutionrelative:emeet.domain\\entities\\expert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26A5900B-0D17-467E-B2A0-14C9D85FF22D}|Emeet.Domain\\Emeet.Domain.csproj|d:\\dotnetreference\\emeet\\emeet.domain\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26A5900B-0D17-467E-B2A0-14C9D85FF22D}|Emeet.Domain\\Emeet.Domain.csproj|solutionrelative:emeet.domain\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A1DE4AD-9458-4B33-AD91-ED6CAF8259F1}|Emeet.API\\Emeet.API.csproj|d:\\dotnetreference\\emeet\\emeet.api\\controllers\\expertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A1DE4AD-9458-4B33-AD91-ED6CAF8259F1}|Emeet.API\\Emeet.API.csproj|solutionrelative:emeet.api\\controllers\\expertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}|Emeet.Service\\Emeet.Service.csproj|d:\\dotnetreference\\emeet\\emeet.service\\services\\expertservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}|Emeet.Service\\Emeet.Service.csproj|solutionrelative:emeet.service\\services\\expertservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}|Emeet.Service\\Emeet.Service.csproj|d:\\dotnetreference\\emeet\\emeet.service\\helpers\\automapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}|Emeet.Service\\Emeet.Service.csproj|solutionrelative:emeet.service\\helpers\\automapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}|Emeet.Service\\Emeet.Service.csproj|d:\\dotnetreference\\emeet\\emeet.service\\interfaces\\iexpertservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}|Emeet.Service\\Emeet.Service.csproj|solutionrelative:emeet.service\\interfaces\\iexpertservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}|Emeet.Service\\Emeet.Service.csproj|d:\\dotnetreference\\emeet\\emeet.service\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}|Emeet.Service\\Emeet.Service.csproj|solutionrelative:emeet.service\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9A1DE4AD-9458-4B33-AD91-ED6CAF8259F1}|Emeet.API\\Emeet.API.csproj|d:\\dotnetreference\\emeet\\emeet.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}|Emeet.Service\\Emeet.Service.csproj|d:\\dotnetreference\\emeet\\emeet.service\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}|Emeet.Service\\Emeet.Service.csproj|solutionrelative:emeet.service\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}|Emeet.Service\\Emeet.Service.csproj|d:\\dotnetreference\\emeet\\emeet.service\\dtos\\requests\\user\\updateuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}|Emeet.Service\\Emeet.Service.csproj|solutionrelative:emeet.service\\dtos\\requests\\user\\updateuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,8 +78,164 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 22,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Emeet.Domain\\Entities\\User.cs",
+              "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.Domain\\Entities\\User.cs",
+              "RelativeToolTip": "Emeet.Domain\\Entities\\User.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T07:34:25.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StaticFile.cs",
+              "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.Domain\\Entities\\StaticFile.cs",
+              "RelativeDocumentMoniker": "Emeet.Domain\\Entities\\StaticFile.cs",
+              "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.Domain\\Entities\\StaticFile.cs",
+              "RelativeToolTip": "Emeet.Domain\\Entities\\StaticFile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T07:34:16.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Schedule.cs",
+              "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.Domain\\Entities\\Schedule.cs",
+              "RelativeDocumentMoniker": "Emeet.Domain\\Entities\\Schedule.cs",
+              "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.Domain\\Entities\\Schedule.cs",
+              "RelativeToolTip": "Emeet.Domain\\Entities\\Schedule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T07:34:05.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.Domain\\Entities\\Payment.cs",
+              "RelativeDocumentMoniker": "Emeet.Domain\\Entities\\Payment.cs",
+              "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.Domain\\Entities\\Payment.cs",
+              "RelativeToolTip": "Emeet.Domain\\Entities\\Payment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T07:33:55.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OTP.cs",
+              "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.Domain\\Entities\\OTP.cs",
+              "RelativeDocumentMoniker": "Emeet.Domain\\Entities\\OTP.cs",
+              "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.Domain\\Entities\\OTP.cs",
+              "RelativeToolTip": "Emeet.Domain\\Entities\\OTP.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T07:33:46.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Feedback.cs",
+              "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.Domain\\Entities\\Feedback.cs",
+              "RelativeDocumentMoniker": "Emeet.Domain\\Entities\\Feedback.cs",
+              "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.Domain\\Entities\\Feedback.cs",
+              "RelativeToolTip": "Emeet.Domain\\Entities\\Feedback.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T07:33:35.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Expert.cs",
+              "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.Domain\\Entities\\Expert.cs",
+              "RelativeDocumentMoniker": "Emeet.Domain\\Entities\\Expert.cs",
+              "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.Domain\\Entities\\Expert.cs",
+              "RelativeToolTip": "Emeet.Domain\\Entities\\Expert.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T07:33:18.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ExpertCategory.cs",
+              "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.Domain\\Entities\\ExpertCategory.cs",
+              "RelativeDocumentMoniker": "Emeet.Domain\\Entities\\ExpertCategory.cs",
+              "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.Domain\\Entities\\ExpertCategory.cs",
+              "RelativeToolTip": "Emeet.Domain\\Entities\\ExpertCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T07:33:17.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.Domain\\Entities\\Category.cs",
+              "RelativeDocumentMoniker": "Emeet.Domain\\Entities\\Category.cs",
+              "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.Domain\\Entities\\Category.cs",
+              "RelativeToolTip": "Emeet.Domain\\Entities\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T07:33:09.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AutoMapperProfile.cs",
+              "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.Service\\Helpers\\AutoMapperProfile.cs",
+              "RelativeDocumentMoniker": "Emeet.Service\\Helpers\\AutoMapperProfile.cs",
+              "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.Service\\Helpers\\AutoMapperProfile.cs",
+              "RelativeToolTip": "Emeet.Service\\Helpers\\AutoMapperProfile.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAxwCsAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T06:10:40.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IExpertService.cs",
+              "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.Service\\Interfaces\\IExpertService.cs",
+              "RelativeDocumentMoniker": "Emeet.Service\\Interfaces\\IExpertService.cs",
+              "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.Service\\Interfaces\\IExpertService.cs",
+              "RelativeToolTip": "Emeet.Service\\Interfaces\\IExpertService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T06:03:51.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ExpertService.cs",
+              "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.Service\\Services\\ExpertService.cs",
+              "RelativeDocumentMoniker": "Emeet.Service\\Services\\ExpertService.cs",
+              "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.Service\\Services\\ExpertService.cs",
+              "RelativeToolTip": "Emeet.Service\\Services\\ExpertService.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAADoAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T05:11:41.487Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -62,20 +266,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 10,
+              "Title": "ExpertController.cs",
+              "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.API\\Controllers\\ExpertController.cs",
+              "RelativeDocumentMoniker": "Emeet.API\\Controllers\\ExpertController.cs",
+              "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.API\\Controllers\\ExpertController.cs",
+              "RelativeToolTip": "Emeet.API\\Controllers\\ExpertController.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAuwGsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T05:06:25.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "AuthenticationService.cs",
               "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.Service\\Services\\AuthenticationService.cs",
               "RelativeDocumentMoniker": "Emeet.Service\\Services\\AuthenticationService.cs",
               "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.Service\\Services\\AuthenticationService.cs",
               "RelativeToolTip": "Emeet.Service\\Services\\AuthenticationService.cs",
-              "ViewState": "AgIAAJYAAAAAAAAAAAAmwK4AAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAwwCIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T13:39:00.229Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-18T13:39:00.229Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 16,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.Service\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Emeet.Service\\Services\\UserService.cs",
@@ -87,20 +303,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "EmeetDbContext.cs",
               "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.Infrastructure\\Data\\EmeetDbContext.cs",
               "RelativeDocumentMoniker": "Emeet.Infrastructure\\Data\\EmeetDbContext.cs",
               "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.Infrastructure\\Data\\EmeetDbContext.cs",
               "RelativeToolTip": "Emeet.Infrastructure\\Data\\EmeetDbContext.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAwBMAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAgwA0AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-18T05:03:49.741Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 15,
               "Title": "UserController.cs",
               "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.API\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Emeet.API\\Controllers\\UserController.cs",
@@ -123,40 +339,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "a3a641cf-bf49-4f62-b4b6-c7a62a4dc9ce",
-        "Display": 0,
-        "X": 1048,
-        "Y": 383,
-        "Width": 1378,
-        "Height": 813,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UpdateUserRequest.cs",
-              "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.Service\\DTOs\\Requests\\User\\UpdateUserRequest.cs",
-              "RelativeDocumentMoniker": "Emeet.Service\\DTOs\\Requests\\User\\UpdateUserRequest.cs",
-              "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.Service\\DTOs\\Requests\\User\\UpdateUserRequest.cs",
-              "RelativeToolTip": "Emeet.Service\\DTOs\\Requests\\User\\UpdateUserRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T04:51:00.28Z",
-              "EditorCaption": ""
             }
           ]
         }

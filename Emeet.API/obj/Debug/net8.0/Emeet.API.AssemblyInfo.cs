@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Emeet.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+44f8440b7a763af7f63c3c17be4c12022ee23b0f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd3a6d8d84f80a3efd4cff7fe22ff517d1140ff5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Emeet.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Emeet.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -62,7 +62,7 @@ namespace Emeet.API.Controllers
         }
 
         [HttpPost]
-        //[Authorize(Roles = RoleNameAuthor.Expert)]
+        [Authorize(Roles = RoleNameAuthor.Expert)]
         public async Task<IActionResult> UploadCertificates(UploadCertificateRequest uploadRequest)
         {
             try
@@ -84,7 +84,7 @@ namespace Emeet.API.Controllers
         }
 
         [HttpDelete]
-        //[Authorize(Roles = RoleNameAuthor.Expert)]
+        [Authorize(Roles = RoleNameAuthor.Expert)]
         public async Task<IActionResult> DeleteCertificates(DeleteCertificateRequest deleteCertificate)
         {
             try
