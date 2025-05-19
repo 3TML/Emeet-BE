@@ -41,6 +41,7 @@ namespace Emeet.Service.Helpers
                 .ForMember(dest => dest.TotalPreview, opt => opt.MapFrom(src => src.Experts.FirstOrDefault().TotalReview))
                 .ForMember(dest => dest.ListCategory, opt => opt.MapFrom(src =>
                     src.Experts.FirstOrDefault().ExpertCategories.Select(c => c.Category.Name).ToList()));
+            CreateMap<GetCertificatesResponse, Expert>().ReverseMap();
 
             //Category
             CreateMap<GetCategoryResponse, Category>().ReverseMap();

@@ -9,5 +9,12 @@ namespace Emeet.Domain.Enums
     public class MediaPath
     {
         public static string AVATAR = "EMEET/AVATAR";
+        public static string Certificate = "EMEET/CER";
+    }
+
+    public static class MediaType
+    {
+        public const string Image = "IMAGE";
+        public const string Video = "VIDEO";
     }
 }

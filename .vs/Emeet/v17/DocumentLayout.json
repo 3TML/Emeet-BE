@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\DotnetReference\\Emeet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}|Emeet.Service\\Emeet.Service.csproj|d:\\dotnetreference\\emeet\\emeet.service\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}|Emeet.Service\\Emeet.Service.csproj|solutionrelative:emeet.service\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1EA1DC6C-2A5F-475D-8161-E5A0EAE62439}|Emeet.Infrastructure\\Emeet.Infrastructure.csproj|d:\\dotnetreference\\emeet\\emeet.infrastructure\\data\\emeetdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1EA1DC6C-2A5F-475D-8161-E5A0EAE62439}|Emeet.Infrastructure\\Emeet.Infrastructure.csproj|solutionrelative:emeet.infrastructure\\data\\emeetdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}|Emeet.Service\\Emeet.Service.csproj|d:\\dotnetreference\\emeet\\emeet.service\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}|Emeet.Service\\Emeet.Service.csproj|solutionrelative:emeet.service\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9A1DE4AD-9458-4B33-AD91-ED6CAF8259F1}|Emeet.API\\Emeet.API.csproj|d:\\dotnetreference\\emeet\\emeet.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}|Emeet.Service\\Emeet.Service.csproj|d:\\dotnetreference\\emeet\\emeet.service\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}|Emeet.Service\\Emeet.Service.csproj|solutionrelative:emeet.service\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}|Emeet.Service\\Emeet.Service.csproj|d:\\dotnetreference\\emeet\\emeet.service\\dtos\\requests\\user\\updateuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}|Emeet.Service\\Emeet.Service.csproj|solutionrelative:emeet.service\\dtos\\requests\\user\\updateuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,13 +58,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AuthenticationService.cs",
               "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.Service\\Services\\AuthenticationService.cs",
               "RelativeDocumentMoniker": "Emeet.Service\\Services\\AuthenticationService.cs",
               "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.Service\\Services\\AuthenticationService.cs",
               "RelativeToolTip": "Emeet.Service\\Services\\AuthenticationService.cs",
-              "ViewState": "AgIAAJYAAAAAAAAAAAAmwK4AAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAwwCIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-18T13:39:00.229Z",
               "EditorCaption": ""
@@ -87,13 +83,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "EmeetDbContext.cs",
               "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.Infrastructure\\Data\\EmeetDbContext.cs",
               "RelativeDocumentMoniker": "Emeet.Infrastructure\\Data\\EmeetDbContext.cs",
               "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.Infrastructure\\Data\\EmeetDbContext.cs",
               "RelativeToolTip": "Emeet.Infrastructure\\Data\\EmeetDbContext.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAwBMAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA7wB0AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-18T05:03:49.741Z",
               "EditorCaption": ""
@@ -123,40 +119,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "a3a641cf-bf49-4f62-b4b6-c7a62a4dc9ce",
-        "Display": 0,
-        "X": 1048,
-        "Y": 383,
-        "Width": 1378,
-        "Height": 813,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UpdateUserRequest.cs",
-              "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.Service\\DTOs\\Requests\\User\\UpdateUserRequest.cs",
-              "RelativeDocumentMoniker": "Emeet.Service\\DTOs\\Requests\\User\\UpdateUserRequest.cs",
-              "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.Service\\DTOs\\Requests\\User\\UpdateUserRequest.cs",
-              "RelativeToolTip": "Emeet.Service\\DTOs\\Requests\\User\\UpdateUserRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T04:51:00.28Z",
-              "EditorCaption": ""
             }
           ]
         }
