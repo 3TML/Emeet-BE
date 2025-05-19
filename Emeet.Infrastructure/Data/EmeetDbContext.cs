@@ -248,7 +248,7 @@ namespace Emeet.Infrastructure.Data
 
             modelBuilder.Entity<ExService>(entity =>
             {
-                entity.ToTable("Service");
+                entity.ToTable("ex_service");
 
                 entity.HasKey(e => e.Id);
 
@@ -263,11 +263,11 @@ namespace Emeet.Infrastructure.Data
                       .HasColumnName("description");
 
                 entity.Property(e => e.Time)
-                      .HasColumnType("decimal")
+                      .HasColumnType("decimal(5,2)")
                       .HasColumnName("time");
 
                 entity.Property(e => e.Price)
-                      .HasColumnType("decimal")
+                      .HasColumnType("decimal(10,2)")
                       .HasColumnName("price");
 
                 entity.Property(e => e.ExpertId)
