@@ -8,7 +8,7 @@ namespace Emeet.Service.DTOs.Requests.Schedule
 {
     public class UpdateScheduleRequest
     {
-        public string DayOfMonth { get; set; }
+        public string DayOfWeek { get; set; }
         public TimeSpan? StartTime { get; set; }
         public TimeSpan? EndTime { get; set; }
         public bool Status { get; set; }

@@ -50,7 +50,7 @@ namespace Emeet.Service.Services
         public async Task<bool> UpdateSchedule(Guid id, UpdateScheduleRequest request)
         {
             var schedule = await _unitOfWork.GetRepository<Schedule>().SingleOrDefaultAsync(predicate: x => x.Id == id);
-            schedule.DayOfMonth = request.DayOfMonth;
+            schedule.DayOfWeek = request.DayOfWeek;
             schedule.Status = request.Status;
             schedule.StartTime = request.StartTime;
             schedule.EndTime = request.EndTime;

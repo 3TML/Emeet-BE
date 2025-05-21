@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Emeet.Service")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2edd8836cb9989f623d0d0cac6c082f3b1fb078d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a71cb37438625c78dfa265fbb46752030e6076b0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Emeet.Service")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Emeet.Service")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
