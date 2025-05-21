@@ -1,20 +1,32 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\DotnetReference\\Emeet\\",
-<<<<<<< HEAD
   "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{9A1DE4AD-9458-4B33-AD91-ED6CAF8259F1}|Emeet.API\\Emeet.API.csproj|d:\\dotnetreference\\emeet\\emeet.api\\controllers\\exservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A1DE4AD-9458-4B33-AD91-ED6CAF8259F1}|Emeet.API\\Emeet.API.csproj|solutionrelative:emeet.api\\controllers\\exservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
     {
       "AbsoluteMoniker": "D:0:0:{1EA1DC6C-2A5F-475D-8161-E5A0EAE62439}|Emeet.Infrastructure\\Emeet.Infrastructure.csproj|d:\\dotnetreference\\emeet\\emeet.infrastructure\\data\\emeetdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1EA1DC6C-2A5F-475D-8161-E5A0EAE62439}|Emeet.Infrastructure\\Emeet.Infrastructure.csproj|solutionrelative:emeet.infrastructure\\data\\emeetdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A1DE4AD-9458-4B33-AD91-ED6CAF8259F1}|Emeet.API\\Emeet.API.csproj|d:\\dotnetreference\\emeet\\emeet.api\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A1DE4AD-9458-4B33-AD91-ED6CAF8259F1}|Emeet.API\\Emeet.API.csproj|solutionrelative:emeet.api\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A1DE4AD-9458-4B33-AD91-ED6CAF8259F1}|Emeet.API\\Emeet.API.csproj|d:\\dotnetreference\\emeet\\emeet.api\\controllers\\schedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A1DE4AD-9458-4B33-AD91-ED6CAF8259F1}|Emeet.API\\Emeet.API.csproj|solutionrelative:emeet.api\\controllers\\schedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}|Emeet.Service\\Emeet.Service.csproj|d:\\dotnetreference\\emeet\\emeet.service\\services\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}|Emeet.Service\\Emeet.Service.csproj|solutionrelative:emeet.service\\services\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}|Emeet.Service\\Emeet.Service.csproj|d:\\dotnetreference\\emeet\\emeet.service\\interfaces\\iappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4EF7CB89-A31E-4DBE-96FA-FB40A44AEE6D}|Emeet.Service\\Emeet.Service.csproj|solutionrelative:emeet.service\\interfaces\\iappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A1DE4AD-9458-4B33-AD91-ED6CAF8259F1}|Emeet.API\\Emeet.API.csproj|d:\\dotnetreference\\emeet\\emeet.api\\controllers\\exservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A1DE4AD-9458-4B33-AD91-ED6CAF8259F1}|Emeet.API\\Emeet.API.csproj|solutionrelative:emeet.api\\controllers\\exservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
-=======
-  "Documents": [],
->>>>>>> 50a958e (Fix: remove secret key from appsettings.json)
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,8 +34,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 12,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppointmentController.cs",
+              "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.API\\Controllers\\AppointmentController.cs",
+              "RelativeDocumentMoniker": "Emeet.API\\Controllers\\AppointmentController.cs",
+              "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.API\\Controllers\\AppointmentController.cs",
+              "RelativeToolTip": "Emeet.API\\Controllers\\AppointmentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T14:29:24.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ScheduleController.cs",
+              "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.API\\Controllers\\ScheduleController.cs",
+              "RelativeDocumentMoniker": "Emeet.API\\Controllers\\ScheduleController.cs",
+              "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.API\\Controllers\\ScheduleController.cs",
+              "RelativeToolTip": "Emeet.API\\Controllers\\ScheduleController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T14:29:27.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IAppointmentService.cs",
+              "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.Service\\Interfaces\\IAppointmentService.cs",
+              "RelativeDocumentMoniker": "Emeet.Service\\Interfaces\\IAppointmentService.cs",
+              "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.Service\\Interfaces\\IAppointmentService.cs",
+              "RelativeToolTip": "Emeet.Service\\Interfaces\\IAppointmentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T14:18:11.655Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -51,11 +102,23 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
-<<<<<<< HEAD
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "AppointmentService.cs",
+              "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.Service\\Services\\AppointmentService.cs",
+              "RelativeDocumentMoniker": "Emeet.Service\\Services\\AppointmentService.cs",
+              "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.Service\\Services\\AppointmentService.cs",
+              "RelativeToolTip": "Emeet.Service\\Services\\AppointmentService.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAEwGwAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T14:10:37.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "ExServiceController.cs",
               "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.API\\Controllers\\ExServiceController.cs",
               "RelativeDocumentMoniker": "Emeet.API\\Controllers\\ExServiceController.cs",
@@ -68,18 +131,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "EmeetDbContext.cs",
               "DocumentMoniker": "D:\\DotnetReference\\Emeet\\Emeet.Infrastructure\\Data\\EmeetDbContext.cs",
               "RelativeDocumentMoniker": "Emeet.Infrastructure\\Data\\EmeetDbContext.cs",
-              "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.Infrastructure\\Data\\EmeetDbContext.cs",
-              "RelativeToolTip": "Emeet.Infrastructure\\Data\\EmeetDbContext.cs",
-              "ViewState": "AgIAAO0AAAAAAAAAAAAiwAMBAAAzAAAAAAAAAA==",
+              "ToolTip": "D:\\DotnetReference\\Emeet\\Emeet.Infrastructure\\Data\\EmeetDbContext.cs*",
+              "RelativeToolTip": "Emeet.Infrastructure\\Data\\EmeetDbContext.cs*",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBcAAABlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-19T13:34:39.816Z",
               "EditorCaption": ""
-=======
->>>>>>> 50a958e (Fix: remove secret key from appsettings.json)
             }
           ]
         },

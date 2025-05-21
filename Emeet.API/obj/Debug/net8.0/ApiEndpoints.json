@@ -32,6 +32,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Emeet.API.Controllers.AppointmentController",
+    "Method": "GetAvailableTime",
+    "RelativePath": "api/v1/auth/GetAvailableTime",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ExpertId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "ServiceId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "StartDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Emeet.API.Controllers.AuthenticationController",
     "Method": "LoginByPassword",
     "RelativePath": "api/v1/auth/LoginByPassword",

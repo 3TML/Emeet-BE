@@ -19,5 +19,6 @@ namespace Emeet.Domain.Entities
         public DateTime? UpdatedAt { get; set; }
 
         public virtual Expert Expert { get; set; }
+        public virtual ICollection<Appointment> Appointments { get; set; }
     }
 }

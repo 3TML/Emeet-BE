@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Emeet.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a462879abe7ea9da16e86b3bde246b83b8d6be43")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc78e7fe683159e5d254d83a21a1bbfaad62cf02")]
->>>>>>> 50a958e (Fix: remove secret key from appsettings.json)
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2edd8836cb9989f623d0d0cac6c082f3b1fb078d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Emeet.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Emeet.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

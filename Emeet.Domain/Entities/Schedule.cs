@@ -10,7 +10,7 @@ namespace Emeet.Domain.Entities
     {
         public Guid Id { get; set; }
         public Guid ExpertId { get; set; }
-        public string DayOfMonth { get; set; }
+        public string DayOfWeek { get; set; }
         public TimeSpan? StartTime { get; set; }
         public TimeSpan? EndTime { get; set; }
         public bool Status { get; set; }

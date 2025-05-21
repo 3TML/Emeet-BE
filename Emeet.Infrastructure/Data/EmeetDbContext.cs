@@ -20,7 +20,7 @@ namespace Emeet.Infrastructure.Data
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-            //optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnectionString"));
+            // optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnectionString"));
             optionsBuilder.UseSqlServer(configuration.GetConnectionString("ServerConnectionString"));
         }
 
@@ -141,6 +141,7 @@ namespace Emeet.Infrastructure.Data
                 entity.Property(e => e.StartTime).HasColumnName("start_time");
                 entity.Property(e => e.EndTime).HasColumnName("end_time");
                 entity.Property(e => e.LinkMeet).HasColumnName("link_meet");
+                entity.Property(e => e.ServiceId).HasColumnName("service_id");
                 entity.Property(e => e.Amount).HasColumnType("decimal(18, 2)").HasColumnName("amount");
                 entity.Property(e => e.Description).HasMaxLength(255).HasColumnName("description");
                 entity.Property(e => e.Status).HasMaxLength(25).HasColumnName("status");
@@ -156,6 +157,12 @@ namespace Emeet.Infrastructure.Data
                     .HasForeignKey(d => d.ExpertId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_appointment_expert");
+
+                entity.HasOne(d => d.ExService)
+                    .WithMany(p => p.Appointments)
+                    .HasForeignKey(d => d.ServiceId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_appointment_exservice");
             });
 
             modelBuilder.Entity<Feedback>(entity =>
@@ -228,7 +235,7 @@ namespace Emeet.Infrastructure.Data
 
                 entity.Property(e => e.Id).HasColumnName("id");
                 entity.Property(e => e.ExpertId).HasColumnName("expert_id");
-                entity.Property(e => e.DayOfMonth).HasMaxLength(25).HasColumnName("day_of_month");
+                entity.Property(e => e.DayOfWeek).HasMaxLength(25).HasColumnName("day_of_week");
                 entity.Property(e => e.StartTime)
                       .HasColumnName("start_time")
                       .HasColumnType("time")

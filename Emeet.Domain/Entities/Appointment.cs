@@ -11,6 +11,7 @@ namespace Emeet.Domain.Entities
         public Guid Id { get; set; }
         public Guid UserId { get; set; }
         public Guid ExpertId { get; set; }
+        public Guid ServiceId { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
         public string LinkMeet { get; set; }
@@ -19,6 +20,7 @@ namespace Emeet.Domain.Entities
         public string Status { get; set; }
 
         public virtual User User { get; set; }
+        public virtual ExService ExService { get; set; }
         public virtual Expert Expert { get; set; }
         public virtual ICollection<Feedback> Feedbacks { get; set; }
         public virtual ICollection<Payment> Payments { get; set; }
