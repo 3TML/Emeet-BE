@@ -8,10 +8,13 @@ using Emeet.Service.DTOs.Responses.Appointment;
 using Emeet.Service.Interfaces;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Services;
+using LinqKit;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
@@ -110,6 +113,28 @@ namespace Emeet.Service.Services
             appointment.LinkMeet = "";
             await _unitOfWork.GetRepository<Appointment>().InsertAsync(appointment);
             return await _unitOfWork.CommitAsync() > 0;
+        }
+
+        public async Task<GetAppointmentsResponse> GetAppointmentByCustomerId(Guid customerId, DateTime? date, string expertName, int page, int size)
+        {
+            var predicate = PredicateBuilder.New<Appointment>(x => x.UserId == customerId && x.Expert.User.FullName.Contains(expertName));
+            if (date != null)
+            {
+                predicate = predicate.And(x => x.StartTime.Date == date.Value.Date);
+            }
+            var appointments = await _unitOfWork.GetRepository<Appointment>().GetPagingListAsync(predicate: predicate, include: x=>x.Include(s=>s.Expert).ThenInclude(s=>s.User).Include(s=>s.ExService), page: page, size: size);
+            return _mapper.Map<GetAppointmentsResponse>(appointments);
+        }
+
+        public async Task<GetAppointmentsResponse> GetAppointmentByExpertId(Guid expertId, DateTime? date, string customerName, int page, int size)
+        {
+            var predicate = PredicateBuilder.New<Appointment>(x => x.ExpertId == expertId && x.Expert.User.FullName.Contains(customerName));
+            if (date != null)
+            {
+                predicate = predicate.And(x => x.StartTime.Date == date.Value.Date);
+            }
+            var appointments = await _unitOfWork.GetRepository<Appointment>().GetPagingListAsync(predicate: predicate, include: x => x.Include(s => s.Expert).ThenInclude(s => s.User).Include(s => s.ExService), page: page, size: size);
+            return _mapper.Map<GetAppointmentsResponse>(appointments);
         }
 
         //public async Task<string> CreateLinkGgMeet()

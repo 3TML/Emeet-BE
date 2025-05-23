@@ -131,6 +131,26 @@
           }
         }
       },
+      "LinqKit.Core/1.2.5": {
+        "runtime": {
+          "lib/netstandard2.1/LinqKit.Core.dll": {
+            "assemblyVersion": "1.2.5.0",
+            "fileVersion": "1.2.5.0"
+          }
+        }
+      },
+      "LinqKit.Microsoft.EntityFrameworkCore/8.1.5": {
+        "dependencies": {
+          "LinqKit.Core": "1.2.5",
+          "Microsoft.EntityFrameworkCore": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/LinqKit.Microsoft.EntityFrameworkCore.dll": {
+            "assemblyVersion": "8.1.5.0",
+            "fileVersion": "8.1.5.0"
+          }
+        }
+      },
       "MailKit/4.12.0": {
         "dependencies": {
           "MimeKit": "4.12.0",
@@ -1537,6 +1557,7 @@
           "Emeet.Domain": "1.0.0",
           "Emeet.Infrastructure": "1.0.0",
           "Google.Apis.Auth": "1.69.0",
+          "LinqKit.Microsoft.EntityFrameworkCore": "8.1.5",
           "MailKit": "4.12.0",
           "Microsoft.AspNetCore.Http": "2.3.0",
           "Microsoft.Extensions.Configuration": "8.0.0"
@@ -1618,6 +1639,20 @@
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "LinqKit.Core/1.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+5UKyagtVX33TSeOGorYzDXus/ypAISfM7HFfrix4BEmuuGF+nhSjf8P9csejLQ79ny5ms33M5/lQ2SkwC0Jxw==",
+      "path": "linqkit.core/1.2.5",
+      "hashPath": "linqkit.core.1.2.5.nupkg.sha512"
+    },
+    "LinqKit.Microsoft.EntityFrameworkCore/8.1.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2nTqWs9ZrxNoYrV7nNWjDvAquepoeOyHoJ80fJTAieIVINfZx7n2HVlNtWOGdN0uc7LcftKBFpIu4qua5r7ivQ==",
+      "path": "linqkit.microsoft.entityframeworkcore/8.1.5",
+      "hashPath": "linqkit.microsoft.entityframeworkcore.8.1.5.nupkg.sha512"
     },
     "MailKit/4.12.0": {
       "type": "package",

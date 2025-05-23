@@ -1,5 +1,129 @@
 [
   {
+    "ContainingType": "Emeet.API.Controllers.AppointmentController",
+    "Method": "BookExpert",
+    "RelativePath": "api/v1/appointment/BookExpert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ExpertId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "ServiceId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Emeet.API.Controllers.AppointmentController",
+    "Method": "GetAppointmentByCustomerId",
+    "RelativePath": "api/v1/appointment/GetAppointmentByCustomerId/{customerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "date",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "expertName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "size",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Emeet.API.Controllers.AppointmentController",
+    "Method": "GetAppointmentByExpertId",
+    "RelativePath": "api/v1/appointment/GetAppointmentByExpertId/{expertId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "expertId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "date",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "expertName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "size",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Emeet.API.Controllers.AppointmentController",
+    "Method": "GetAvailableTime",
+    "RelativePath": "api/v1/appointment/GetAvailableTime",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "StartDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ServiceId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExpertId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Emeet.API.Controllers.AuthenticationController",
     "Method": "FetchUser",
     "RelativePath": "api/v1/auth/FetchUser/{accessToken}",
@@ -27,32 +151,6 @@
         "Name": "request",
         "Type": "Emeet.Service.DTOs.Requests.Authentication.RefreshTokenRequest",
         "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Emeet.API.Controllers.AppointmentController",
-    "Method": "GetAvailableTime",
-    "RelativePath": "api/v1/auth/GetAvailableTime",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "ExpertId",
-        "Type": "System.Guid",
-        "IsRequired": false
-      },
-      {
-        "Name": "ServiceId",
-        "Type": "System.Guid",
-        "IsRequired": false
-      },
-      {
-        "Name": "StartDate",
-        "Type": "System.DateTime",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": []

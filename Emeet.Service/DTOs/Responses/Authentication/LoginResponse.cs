@@ -8,6 +8,7 @@ namespace Emeet.Service.DTOs.Responses.Authentication
 {
     public class LoginResponse
     {
+        public Guid Id { get; set; }
         public string Role { get; set; }
         public string Avatar { get; set; }
         public string FullName { get; set; }
@@ -23,6 +24,7 @@ namespace Emeet.Service.DTOs.Responses.Authentication
     }
     public class ExpertInformation
     {
+        public Guid Id { get; set; }
         public string Experience { get; set; }
         public int TotalPreview { get; set; }
         public decimal Rate { get; set; }

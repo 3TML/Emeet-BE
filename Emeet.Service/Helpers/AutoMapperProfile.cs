@@ -3,6 +3,7 @@ using Emeet.Domain.Entities;
 using Emeet.Service.DTOs.Requests.Authentication;
 using Emeet.Service.DTOs.Requests.ExpertService;
 using Emeet.Service.DTOs.Requests.Schedule;
+using Emeet.Service.DTOs.Responses.Appointment;
 using Emeet.Service.DTOs.Responses.Authentication;
 using Emeet.Service.DTOs.Responses.Category;
 using Emeet.Service.DTOs.Responses.Expert;
@@ -59,6 +60,18 @@ namespace Emeet.Service.Helpers
             CreateMap<Schedule, GetScheduleResponse>()
                 .ForMember(dest => dest.StartTime, opt => opt.MapFrom(src => src.StartTime.HasValue ? src.StartTime.Value.ToString(@"hh\:mm") : null))
                 .ForMember(dest => dest.EndTime, opt => opt.MapFrom(src => src.EndTime.HasValue ? src.EndTime.Value.ToString(@"hh\:mm") : null));
+
+            //Appointment 
+            //CreateMap<Appointment, GetAppointmentsResponse>().ReverseMap();
+            CreateMap<Appointment, GetAppointmentsResponse>()
+                .ForMember(dest => dest.ServiceName,
+                            opt => opt.MapFrom(src => src.ExService.Name)) 
+                .ForMember(dest => dest.CustomerName,
+                            opt => opt.MapFrom(src => src.User.FullName)) 
+                .ForMember(dest => dest.ExpertName,
+                            opt => opt.MapFrom(src => src.Expert.User.FullName)) 
+    ;
+
         }
     }
 }

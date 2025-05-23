@@ -158,3 +158,5 @@ D:\DotnetReference\Emeet\Emeet.API\bin\Debug\net8.0\runtimes\win\lib\net7.0\Syst
 D:\DotnetReference\Emeet\Emeet.API\bin\Debug\net8.0\CloudinaryDotNet.dll
 D:\DotnetReference\Emeet\Emeet.API\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
 D:\DotnetReference\Emeet\Emeet.API\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\DotnetReference\Emeet\Emeet.API\bin\Debug\net8.0\LinqKit.Core.dll
+D:\DotnetReference\Emeet\Emeet.API\bin\Debug\net8.0\LinqKit.Microsoft.EntityFrameworkCore.dll
