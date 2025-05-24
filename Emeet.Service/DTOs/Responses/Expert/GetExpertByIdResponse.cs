@@ -8,6 +8,7 @@ namespace Emeet.Service.DTOs.Responses.Expert
 {
     public class GetExpertByIdResponse
     {
+        public Guid Id { get; set; }
         public string FullName { get; set; }
         public string Avatar { get; set; }
         public string? Bio { get; set; }
@@ -17,6 +18,7 @@ namespace Emeet.Service.DTOs.Responses.Expert
         public string Email { get; set; }
         public string Status { get; set; }
 
+        public Guid ExpertId { get; set; }
         public string Experience { get; set; }
         public int TotalReview { get; set; }
         public decimal Rate { get; set; }

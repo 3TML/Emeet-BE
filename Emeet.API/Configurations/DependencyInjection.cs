@@ -28,6 +28,8 @@ namespace Emeet.API.Configurations
             services.AddScoped<IMediaService, MediaService>();
             services.AddScoped<IScheduleService, ScheduleService>();
             services.AddScoped<IExServiceService, ExServiceService>();
+            services.AddScoped<IFeedbackService, FeedbackService>();
+
 
             services.AddScoped(typeof(IPaginate<>), typeof(Paginate<>));
 
