@@ -46,4 +46,4 @@ D:\DotnetReference\Emeet\bin\Debug\Google.Apis.dll
 D:\DotnetReference\Emeet\bin\Debug\System.CodeDom.dll
 D:\DotnetReference\Emeet\bin\Debug\Microsoft.Extensions.Options.dll
 D:\DotnetReference\Emeet\bin\Debug\CloudinaryDotNet.dll
-D:\DotnetReference\Emeet\bin\Debug\Google.Apis.Calendar.v3.dll
+D:\DotnetReference\Emeet\bin\Debug\LinqKit.Core.dll

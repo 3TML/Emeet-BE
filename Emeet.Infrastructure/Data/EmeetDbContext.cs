@@ -20,7 +20,7 @@ namespace Emeet.Infrastructure.Data
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-             //optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnectionString"));
+            //optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnectionString"));
             optionsBuilder.UseSqlServer(configuration.GetConnectionString("ServerConnectionString"));
         }
 
@@ -62,7 +62,7 @@ namespace Emeet.Infrastructure.Data
 
                 entity.Property(e => e.Id).HasColumnName("id");
                 entity.Property(e => e.Username).HasMaxLength(50).HasColumnName("username");
-                entity.Property(e => e.Password).HasMaxLength(50).HasColumnName("password");
+                entity.Property(e => e.Password).HasMaxLength(200).HasColumnName("password");
                 entity.Property(e => e.FullName).HasMaxLength(50).HasColumnName("full_name");
                 entity.Property(e => e.Role).HasMaxLength(20).HasColumnName("role");
                 entity.Property(e => e.Avatar).HasColumnName("avatar");
