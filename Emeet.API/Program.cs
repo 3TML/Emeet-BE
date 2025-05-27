@@ -65,13 +65,15 @@ builder.Services.AddDIAccessor();
 //                  .AllowCredentials();  // Allow credentials for CORS
 //        });
 //});
-builder.Services.AddCors(p => p.AddPolicy(CorsConstant.PolicyName, policy =>
+builder.Services.AddCors(options =>
 {
-    policy.WithOrigins("http://localhost:3000")
-          .AllowAnyHeader()
-          .AllowAnyMethod();
-    // Nếu cần credentials thì thêm .AllowCredentials()
-}));
+    options.AddPolicy(CorsConstant.PolicyName, policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
 
 // Jwt configuration starts here
 var jwtIssuer = builder.Configuration.GetSection("JwtSettings:Issuer").Get<string>();
