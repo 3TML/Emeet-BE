@@ -65,12 +65,12 @@ builder.Services.AddDIAccessor();
 //                  .AllowCredentials();  // Allow credentials for CORS
 //        });
 //});
-builder.Services.AddCors(p => p.AddPolicy(CorsConstant.PolicyName, policyBuilder =>
+builder.Services.AddCors(p => p.AddPolicy(CorsConstant.PolicyName, policy =>
 {
-    policyBuilder
-        .AllowAnyOrigin()   // Cho phép tất cả origin
-        .AllowAnyMethod()
-        .AllowAnyHeader();
+    policy.WithOrigins("http://localhost:3000")
+          .AllowAnyHeader()
+          .AllowAnyMethod();
+    // Nếu cần credentials thì thêm .AllowCredentials()
 }));
 
 // Jwt configuration starts here
@@ -104,8 +104,6 @@ var app = builder.Build();
 
 app.UseSwagger();
 app.UseSwaggerUI();
-
-//app.UseCors(CorsConstant.PolicyName);
 
 app.UseHttpsRedirection();
 app.UseCors(CorsConstant.PolicyName);
